@@ -265,32 +265,27 @@ a:hover { color: var(--brand-orange-600); }
 .phone {
   width: min(280px, 78vw);
   margin: 0;
-  aspect-ratio: 9 / 19.5;
   border-radius: 1.75rem;
   overflow: hidden;
-  background: #0b0c16;
   border: 0.5px solid rgba(20, 21, 38, 0.18);
   box-shadow: var(--shadow-lg);
   cursor: zoom-in;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  line-height: 0;
 }
 .phone img {
   width: 100%;
   height: auto;
-  max-height: 100%;
-  object-fit: contain;
   display: block;
   aspect-ratio: 676 / 1246;
-  border-radius: 24px;
+  border-radius: inherit;
 }
 .phone--sm { width: min(220px, 62vw); }
 
 .phone-stack {
   position: relative;
   width: min(360px, 90vw);
-  height: min(520px, 70vw);
+  aspect-ratio: 360 / 520;
   margin-inline: auto;
 }
 .phone-stack .phone {
@@ -718,8 +713,8 @@ a:hover { color: var(--brand-orange-600); }
 
 .steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
 }
 .step { text-align: center; }
 .step__num {
@@ -732,8 +727,9 @@ a:hover { color: var(--brand-orange-600); }
   font-weight: 800;
   margin-bottom: 14px;
 }
-.step h3 { margin: 16px 0 8px; font-size: 1.15rem; }
-.step p { margin: 0; color: rgba(255, 255, 255, 0.7); font-size: 0.98rem; }
+.step h3 { margin: 16px 0 8px; font-size: 1.15rem; color: inherit; }
+.step p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+.section--dark .step p { color: rgba(255, 255, 255, 0.7); }
 .step .phone { margin-inline: auto; }
 
 .cta {
