@@ -8,6 +8,8 @@ REPO_URL="https://github.com/EugenKoulik/SpinlySite.git"
 
 # В CI нет tty — не даём git зависать/падать на запросе логина (репозиторий публичный).
 export GIT_TERMINAL_PROMPT=0
+export GIT_ASKPASS=true           # если git всё же спросит пароль — вернётся пусто, не зависнет
+export GCM_INTERACTIVE=never      # на случай Git Credential Manager
 
 exec 9>"$LOCK_FILE"
 if ! flock -n 9; then
@@ -17,8 +19,9 @@ fi
 
 cd "$SITE_DIR"
 
-# Фетчим по прямому публичному URL (не по origin — чтобы не зависеть от настроек сервера/сессии).
-git fetch --prune "$REPO_URL" "$BRANCH"
+# Публичный репо — фетчим по прямому URL и отключаем любые credential-хелперы для этой команды.
+git -c credential.helper= -c credential.interactive=false \
+    fetch --prune "$REPO_URL" "$BRANCH"
 remote_rev="$(git rev-parse FETCH_HEAD)"
 local_rev="$(git rev-parse HEAD)"
 
