@@ -68,14 +68,33 @@
     sections.forEach((s) => tocIo.observe(s));
   }
 
+  function revealAllNow() {
+    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-in"));
+  }
+
+  tocLinks.forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href");
+      const target = id && document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      revealAllNow();
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", id);
+      });
+    });
+  });
+
   const mobileSelect = document.querySelector(".toc-mobile select");
   if (mobileSelect) {
     mobileSelect.addEventListener("change", () => {
-      const id = mobileSelect.value;
-      if (id) {
-        const el = document.querySelector(id);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }
+      const el = document.querySelector(mobileSelect.value);
+      if (!el) return;
+      revealAllNow();
+      requestAnimationFrame(() =>
+        el.scrollIntoView({ behavior: "smooth", block: "start" })
+      );
     });
   }
 

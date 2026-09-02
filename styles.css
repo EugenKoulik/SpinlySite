@@ -33,7 +33,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h) + 1rem);
+  scroll-padding-top: clamp(72px, 12vh, 92px);
   font-optical-sizing: auto;
   max-width: 100%;
   overflow-x: hidden;
@@ -832,7 +832,7 @@ a:hover { color: var(--brand-orange-600); }
 
 .help-section {
   margin-bottom: 56px;
-  scroll-margin-top: calc(var(--header-h) + 16px);
+  scroll-margin-top: clamp(72px, 12vh, 92px);
 }
 .help-section > h2 {
   margin: 0 0 1.5rem;
