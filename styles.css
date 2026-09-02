@@ -782,7 +782,7 @@ a:hover { color: var(--brand-orange-600); }
   grid-template-columns: 240px 1fr;
   gap: 40px;
   align-items: start;
-  padding: 36px 0 80px;
+  padding-block: 36px 80px;
 }
 
 .toc {
