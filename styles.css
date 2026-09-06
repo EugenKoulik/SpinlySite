@@ -270,20 +270,16 @@ a:hover { color: var(--brand-orange-600); }
 .phone {
   width: min(280px, 78vw);
   margin: 0;
-  border-radius: 1.75rem;
-  overflow: hidden;
-  border: 0.5px solid rgba(20, 21, 38, 0.18);
-  box-shadow: var(--shadow-lg);
-  cursor: zoom-in;
   display: block;
   line-height: 0;
+  cursor: zoom-in;
+  filter: drop-shadow(0 12px 28px rgba(20, 21, 38, 0.20));
 }
 .phone img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
-  border-radius: inherit;
+  aspect-ratio: 1080 / 1920;
 }
 .phone--sm { width: min(220px, 62vw); }
 .phone--xs { width: min(168px, 42vw); }
@@ -480,11 +476,28 @@ a:hover { color: var(--brand-orange-600); }
   background: var(--brand-orange);
 }
 
+.compare-heads {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.compare-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.compare-head .phone--xs { width: min(150px, 40vw); }
+.compare-head__name { font-weight: 600; font-size: 1.05rem; }
+.compare-head__sub { font-size: 0.85rem; color: var(--muted); }
+
 .compare-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: var(--radius);
-  border: 1px solid var(--border);
+  border: 0.5px solid var(--border);
 }
 .compare-table {
   width: 100%;
@@ -494,27 +507,27 @@ a:hover { color: var(--brand-orange-600); }
 }
 .compare-table th,
 .compare-table td {
-  padding: 12px 14px;
+  padding: 13px 16px;
   text-align: left;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
   font-size: 0.95rem;
   vertical-align: top;
 }
 .compare-table thead th {
-  background: var(--navy);
+  background: #141526;
   color: #fff;
   font-weight: 700;
   border-bottom: none;
-}
-.compare-table thead th:nth-child(2),
-.compare-table thead th:nth-child(3) {
-  color: var(--brand-orange);
 }
 .compare-table tbody th {
   font-weight: 700;
   color: var(--ink);
   white-space: nowrap;
   width: 22%;
+}
+.compare-table tbody tr:nth-child(even) th,
+.compare-table tbody tr:nth-child(even) td {
+  background: var(--surface-alt);
 }
 .compare-table tbody tr:last-child th,
 .compare-table tbody tr:last-child td {

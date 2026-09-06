@@ -94,11 +94,11 @@
     const target = id && document.querySelector(id);
     if (!target) return false;
     revealAllNow();
-    requestAnimationFrame(() => {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
       history.replaceState(null, "", id);
       setActiveSection(id);
-    });
+    }));
     return true;
   }
 
@@ -119,10 +119,10 @@
   if (location.hash && document.querySelector(location.hash)) {
     revealAllNow();
     setActiveSection(location.hash);
-    requestAnimationFrame(() => {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
       const target = document.querySelector(location.hash);
       if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    }));
   } else if (sections[0]) {
     setActiveSection("#" + sections[0].id);
   }
