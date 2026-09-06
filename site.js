@@ -54,16 +54,34 @@
   const sections = tocLinks
     .map((a) => document.querySelector(a.getAttribute("href")))
     .filter(Boolean);
+  const crumbsCurrent = document.querySelector(".crumbs__current");
+  const mobileSelect = document.querySelector(".toc-mobile select");
+
+  function sectionTitle(section) {
+    return (
+      section.getAttribute("data-title") ||
+      (section.querySelector("h2") && section.querySelector("h2").textContent.trim()) ||
+      ""
+    );
+  }
+
+  function setActiveSection(id) {
+    tocLinks.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === id));
+    const section = document.querySelector(id);
+    if (crumbsCurrent && section) crumbsCurrent.textContent = sectionTitle(section);
+    if (mobileSelect && mobileSelect.value !== id) mobileSelect.value = id;
+  }
+
   if (tocLinks.length && sections.length && "IntersectionObserver" in window) {
     const tocIo = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const id = "#" + entry.target.id;
-          tocLinks.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === id));
-        });
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (!visible.length) return;
+        setActiveSection("#" + visible[0].target.id);
       },
-      { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
+      { rootMargin: "-28% 0px -60% 0px", threshold: 0 }
     );
     sections.forEach((s) => tocIo.observe(s));
   }
@@ -72,30 +90,41 @@
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-in"));
   }
 
+  function goToSection(id) {
+    const target = id && document.querySelector(id);
+    if (!target) return false;
+    revealAllNow();
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", id);
+      setActiveSection(id);
+    });
+    return true;
+  }
+
   tocLinks.forEach((a) => {
     a.addEventListener("click", (e) => {
       const id = a.getAttribute("href");
-      const target = id && document.querySelector(id);
-      if (!target) return;
+      if (!goToSection(id)) return;
       e.preventDefault();
-      revealAllNow();
-      requestAnimationFrame(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-        history.replaceState(null, "", id);
-      });
     });
   });
 
-  const mobileSelect = document.querySelector(".toc-mobile select");
   if (mobileSelect) {
     mobileSelect.addEventListener("change", () => {
-      const el = document.querySelector(mobileSelect.value);
-      if (!el) return;
-      revealAllNow();
-      requestAnimationFrame(() =>
-        el.scrollIntoView({ behavior: "smooth", block: "start" })
-      );
+      goToSection(mobileSelect.value);
     });
+  }
+
+  if (location.hash && document.querySelector(location.hash)) {
+    revealAllNow();
+    setActiveSection(location.hash);
+    requestAnimationFrame(() => {
+      const target = document.querySelector(location.hash);
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  } else if (sections[0]) {
+    setActiveSection("#" + sections[0].id);
   }
 
   if ("IntersectionObserver" in window) {
