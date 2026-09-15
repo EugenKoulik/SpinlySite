@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Spinly">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1E33"/>
+      <stop offset="1" stop-color="#141526"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F9862E" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#F9862E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="960" cy="315" r="300" fill="url(#glow)"/>
+
+  <g>
+    <circle cx="960" cy="315" r="164" fill="#FFFFFF" fill-opacity="0.06"/>
+    <path d="M960,315 L1110,315 A150,150 0 0 1 1066.07,421.07 Z" fill="#F9862E"/>
+    <path d="M960,315 L1066.07,421.07 A150,150 0 0 1 960,465 Z" fill="#F6F7FB"/>
+    <path d="M960,315 L960,465 A150,150 0 0 1 853.93,421.07 Z" fill="#F9862E"/>
+    <path d="M960,315 L853.93,421.07 A150,150 0 0 1 810,315 Z" fill="#F6F7FB"/>
+    <path d="M960,315 L810,315 A150,150 0 0 1 853.93,208.93 Z" fill="#F9862E"/>
+    <path d="M960,315 L853.93,208.93 A150,150 0 0 1 960,165 Z" fill="#F6F7FB"/>
+    <path d="M960,315 L960,165 A150,150 0 0 1 1066.07,208.93 Z" fill="#F9862E"/>
+    <path d="M960,315 L1066.07,208.93 A150,150 0 0 1 1110,315 Z" fill="#F6F7FB"/>
+    <circle cx="960" cy="315" r="150" fill="none" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="6"/>
+    <circle cx="960" cy="315" r="34" fill="#141526" stroke="#F9862E" stroke-width="6"/>
+    <path d="M960,142 L982,104 L938,104 Z" fill="#F9862E"/>
+  </g>
+
+  <g font-family="Segoe UI, Arial, Helvetica, sans-serif">
+    <text x="80" y="168" fill="#F9862E" font-size="26" font-weight="700" letter-spacing="4">TELEGRAM MINI APP</text>
+    <text x="80" y="290" fill="#FFFFFF" font-size="108" font-weight="700" letter-spacing="-2">Spinly</text>
+    <text x="80" y="364" fill="#FFFFFF" fill-opacity="0.92" font-size="40" font-weight="600">&#1050;&#1086;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1086;&#1088; &#1088;&#1086;&#1079;&#1099;&#1075;&#1088;&#1099;&#1096;&#1077;&#1081;</text>
+    <text x="80" y="416" fill="#FFFFFF" fill-opacity="0.92" font-size="40" font-weight="600">&#1074;&#1085;&#1091;&#1090;&#1088;&#1080; Telegram</text>
+    <text x="80" y="496" fill="#FFFFFF" fill-opacity="0.6" font-size="27" font-weight="500">&#1050;&#1086;&#1083;&#1077;&#1089;&#1086; &#1092;&#1086;&#1088;&#1090;&#1091;&#1085;&#1099; &#183; &#1050;&#1077;&#1081;&#1089;&#1099; &#183; &#1043;&#1080;&#1074;&#1099; &#183; &#1057;&#1090;&#1072;&#1090;&#1080;&#1089;&#1090;&#1080;&#1082;&#1072;</text>
+  </g>
+
+  <rect x="80" y="540" width="132" height="6" rx="3" fill="#F9862E"/>
+</svg>

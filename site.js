@@ -127,6 +127,23 @@
     setActiveSection("#" + sections[0].id);
   }
 
+  // Clicks on Telegram CTAs are the site's only conversion. Reported to whichever
+  // counter is installed (Metrika / GA / GTM); silently no-op until one is.
+  document.querySelectorAll("a[data-cta]").forEach((a) => {
+    a.addEventListener("click", () => {
+      const label = a.getAttribute("data-cta") || "unknown";
+      if (typeof window.ym === "function" && window.spinlyMetrikaId) {
+        window.ym(window.spinlyMetrikaId, "reachGoal", "open_telegram", { placement: label });
+      }
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "open_telegram", { placement: label });
+      }
+      if (Array.isArray(window.dataLayer)) {
+        window.dataLayer.push({ event: "open_telegram", placement: label });
+      }
+    });
+  });
+
   if ("IntersectionObserver" in window) {
     const revealIo = new IntersectionObserver(
       (entries) => {
