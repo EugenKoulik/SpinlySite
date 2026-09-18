@@ -132,6 +132,12 @@ a:hover { color: var(--brand-orange-600); }
   color: #fff;
 }
 .btn-lg { padding: 16px 28px; font-size: 1.05rem; }
+.btn-sm,
+.site-header .btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(249, 134, 46, 0.3);
+}
 
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
@@ -157,6 +163,7 @@ a:hover { color: var(--brand-orange-600); }
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
+  margin-bottom: 14px;
   border-radius: 999px;
   background: rgba(249, 134, 46, 0.14);
   color: var(--brand-orange);
@@ -202,7 +209,10 @@ a:hover { color: var(--brand-orange-600); }
   line-height: 1.2;
 }
 .feature__text h2 { font-size: clamp(1.45rem, 2.8vw, 1.95rem); }
+.feature__text .badge + h2,
+.section__head .badge + h2 { margin-top: 0; }
 .feature__text p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+.feature__text p + p { margin-top: 14px; }
 .section--dark .feature__text p { color: rgba(255, 255, 255, 0.78); }
 .feature__media { display: flex; justify-content: center; }
 .feature--wide {
