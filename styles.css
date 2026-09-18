@@ -1061,3 +1061,167 @@ a:hover { color: var(--brand-orange-600); }
   .scenario-grid,
   .why-list { grid-template-columns: 1fr; }
 }
+
+/* ---- Spinly wheel widget (FAB + modal) --------------------------------- */
+
+.spinly-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  z-index: 9998;
+  padding: 0;
+  background: conic-gradient(
+    var(--brand-orange) 0 60deg,
+    #fff 60deg 120deg,
+    var(--brand-orange) 120deg 180deg,
+    #fff 180deg 240deg,
+    var(--brand-orange) 240deg 300deg,
+    #fff 300deg 360deg
+  );
+  box-shadow: 0 6px 20px rgba(249, 134, 46, 0.45), 0 0 0 3px rgba(255, 255, 255, 0.9);
+  animation: spinly-pulse 2.4s ease-in-out infinite;
+}
+.spinly-fab::after {
+  content: "";
+  position: absolute;
+  inset: 38%;
+  border-radius: 50%;
+  background: var(--navy);
+  box-shadow: 0 0 0 3px #fff;
+}
+@keyframes spinly-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+.spinly-fab:hover {
+  animation-play-state: paused;
+  transform: scale(1.1) rotate(15deg);
+  transition: transform 0.2s;
+}
+.spinly-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 11, 22, 0.72);
+  backdrop-filter: blur(4px);
+}
+.spinly-modal.open { display: flex; }
+.spinly-card {
+  width: min(90vw, 360px);
+  background: #fff;
+  border-radius: 24px;
+  padding: 22px 20px 24px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: spinly-pop 0.25s ease;
+}
+@keyframes spinly-pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.spinly-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 0;
+  background: #f0f1f5;
+  color: #555;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+}
+.spinly-title {
+  margin: 2px 0 4px;
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--navy);
+}
+.spinly-sub {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #8A8F9E;
+}
+.spinly-wheel-wrap {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 8px;
+}
+.spinly-pointer {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 20px solid var(--brand-orange);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
+}
+.spinly-wheel {
+  width: 100%;
+  height: 100%;
+  transition: transform 4.6s cubic-bezier(0.17, 0.67, 0.2, 1);
+  border-radius: 50%;
+  box-shadow: 0 8px 26px rgba(249, 134, 46, 0.28), inset 0 0 0 6px #fff;
+}
+.spinly-spin-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  cursor: pointer;
+  background: var(--brand-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 14px rgba(249, 134, 46, 0.5);
+  transition: transform 0.15s;
+}
+.spinly-spin-btn:hover { background: var(--brand-orange-600); }
+.spinly-spin-btn:active { transform: translate(-50%, -50%) scale(0.94); }
+.spinly-spin-btn:disabled { opacity: 0.6; cursor: default; }
+.spinly-result {
+  min-height: 44px;
+  margin: 10px 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.spinly-result.win { color: #1D9E75; }
+.spinly-result.lose { color: #8A8F9E; }
+.spinly-cta {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 11px 20px;
+  border-radius: 12px;
+  background: var(--brand-orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+.spinly-cta:hover { color: #fff; }
+
+@media (max-width: 480px) {
+  .spinly-fab { right: 16px; bottom: 16px; }
+}
