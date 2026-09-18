@@ -1,13 +1,4 @@
 (function () {
-  const header = document.querySelector(".site-header");
-  if (header) {
-    const onScroll = () => {
-      header.classList.toggle("is-scrolled", window.scrollY > 8);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
-
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle && nav) {
@@ -41,7 +32,7 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeLb();
   });
-  document.querySelectorAll(".phone img").forEach((img) => {
+  document.querySelectorAll(".phone img, .theme-tile img").forEach((img) => {
     img.addEventListener("click", (e) => {
       e.stopPropagation();
       lbImg.src = img.currentSrc || img.src;
@@ -50,113 +41,51 @@
     });
   });
 
+  document.querySelectorAll(".media-slot[data-video]").forEach((slot) => {
+    const src = slot.getAttribute("data-video");
+    if (!src) return;
+    const video = document.createElement("video");
+    video.muted = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("muted", "");
+    video.preload = "metadata";
+    video.src = src;
+    video.addEventListener("loadeddata", () => {
+      slot.classList.add("is-filled");
+      slot.replaceChildren(video);
+      video.play().catch(() => {});
+    });
+  });
+
   const tocLinks = Array.from(document.querySelectorAll(".toc a[href^='#']"));
   const sections = tocLinks
     .map((a) => document.querySelector(a.getAttribute("href")))
     .filter(Boolean);
-  const crumbsCurrent = document.querySelector(".crumbs__current");
-  const mobileSelect = document.querySelector(".toc-mobile select");
-
-  function sectionTitle(section) {
-    return (
-      section.getAttribute("data-title") ||
-      (section.querySelector("h2") && section.querySelector("h2").textContent.trim()) ||
-      ""
-    );
-  }
-
-  function setActiveSection(id) {
-    tocLinks.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === id));
-    const section = document.querySelector(id);
-    if (crumbsCurrent && section) crumbsCurrent.textContent = sectionTitle(section);
-    if (mobileSelect && mobileSelect.value !== id) mobileSelect.value = id;
-  }
-
   if (tocLinks.length && sections.length && "IntersectionObserver" in window) {
-    const tocIo = new IntersectionObserver(
+    const io = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (!visible.length) return;
-        setActiveSection("#" + visible[0].target.id);
-      },
-      { rootMargin: "-28% 0px -60% 0px", threshold: 0 }
-    );
-    sections.forEach((s) => tocIo.observe(s));
-  }
-
-  function revealAllNow() {
-    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-in"));
-  }
-
-  function goToSection(id) {
-    const target = id && document.querySelector(id);
-    if (!target) return false;
-    revealAllNow();
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-      history.replaceState(null, "", id);
-      setActiveSection(id);
-    }));
-    return true;
-  }
-
-  tocLinks.forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (!goToSection(id)) return;
-      e.preventDefault();
-    });
-  });
-
-  if (mobileSelect) {
-    mobileSelect.addEventListener("change", () => {
-      goToSection(mobileSelect.value);
-    });
-  }
-
-  if (location.hash && document.querySelector(location.hash)) {
-    revealAllNow();
-    setActiveSection(location.hash);
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      const target = document.querySelector(location.hash);
-      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }));
-  } else if (sections[0]) {
-    setActiveSection("#" + sections[0].id);
-  }
-
-  // Clicks on Telegram CTAs are the site's only conversion. Reported to whichever
-  // counter is installed (Metrika / GA / GTM); silently no-op until one is.
-  document.querySelectorAll("a[data-cta]").forEach((a) => {
-    a.addEventListener("click", () => {
-      const label = a.getAttribute("data-cta") || "unknown";
-      if (typeof window.ym === "function" && window.spinlyMetrikaId) {
-        window.ym(window.spinlyMetrikaId, "reachGoal", "open_telegram", { placement: label });
-      }
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "open_telegram", { placement: label });
-      }
-      if (Array.isArray(window.dataLayer)) {
-        window.dataLayer.push({ event: "open_telegram", placement: label });
-      }
-    });
-  });
-
-  if ("IntersectionObserver" in window) {
-    const revealIo = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (!e.isIntersecting) return;
-          e.target.classList.add("is-in");
-          revealIo.unobserve(e.target);
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = "#" + entry.target.id;
+          tocLinks.forEach((a) => a.classList.toggle("is-active", a.getAttribute("href") === id));
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
     );
-    document.querySelectorAll(".reveal").forEach((el) => revealIo.observe(el));
-  } else {
-    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-in"));
+    sections.forEach((s) => io.observe(s));
+  }
+
+  const mobileSelect = document.querySelector(".toc-mobile select");
+  if (mobileSelect) {
+    mobileSelect.addEventListener("change", () => {
+      const id = mobileSelect.value;
+      if (id) {
+        const el = document.querySelector(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   }
 })();

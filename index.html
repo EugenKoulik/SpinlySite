@@ -3,57 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spinly - конструктор розыгрышей внутри Telegram</title>
-  <meta name="description" content="Полноценный конструктор розыгрышей как Telegram Mini App: моментальные розыгрыши и классические гивы, тонкая настройка, подробная статистика и уникальные механики роста — прямо в Telegram." />
-  <meta property="og:title" content="Spinly — конструктор розыгрышей внутри Telegram" />
-  <meta property="og:description" content="Полноценный конструктор розыгрышей как Telegram Mini App: моментальные розыгрыши и классические гивы, тонкая настройка, подробная статистика и уникальные механики роста — прямо в Telegram." />
-  <meta property="og:image" content="https://help.spinlyroll.ru/assets/og-cover.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Spinly — конструктор розыгрышей внутри Telegram" />
+  <title>Spinly — розыгрыши, которые растят канал и возвращают клиентов</title>
+  <meta name="description" content="Розыгрыши в Telegram с моментальным результатом для участников и ростом аудитории для вас. Колесо, кейсы, гивы — запуск за пару минут, без сторонних сайтов." />
+  <meta property="og:title" content="Spinly — розыгрыши, которые растят канал" />
+  <meta property="og:description" content="Моментальный результат для участников, рост и возврат аудитории, аналитика. Запуск за пару минут прямо в Telegram." />
+  <meta property="og:image" content="assets/logo.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://help.spinlyroll.ru/" />
-  <meta property="og:site_name" content="Spinly" />
-  <meta property="og:locale" content="ru_RU" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Spinly — конструктор розыгрышей внутри Telegram" />
-  <meta name="twitter:description" content="Полноценный конструктор розыгрышей как Telegram Mini App: моментальные розыгрыши и классические гивы, тонкая настройка, подробная статистика и уникальные механики роста." />
-  <meta name="twitter:image" content="https://help.spinlyroll.ru/assets/og-cover.png" />
-  <meta name="theme-color" content="#141526" />
-  <link rel="canonical" href="https://help.spinlyroll.ru/" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Spinly",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Telegram",
-    "url": "https://help.spinlyroll.ru/",
-    "image": "https://help.spinlyroll.ru/assets/og-cover.png",
-    "description": "Конструктор розыгрышей внутри Telegram: колесо фортуны, кейсы, гивы, соавторство, реферальные программы и статистика.",
-    "inLanguage": "ru",
-    "installUrl": "https://t.me/spinlyrollbot"
-  }
-  </script>
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112670514', 'ym');
-
-    ym(112670514, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-    // Read by site.js when reporting the open_telegram goal.
-    window.spinlyMetrikaId = 112670514;
-  </script>
-  <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-  <noscript><div><img src="https://mc.yandex.ru/watch/112670514" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html">
@@ -62,10 +21,11 @@
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button>
       <nav class="nav" id="main-nav">
-        <a href="#features">Возможности</a>
+        <a href="#why">Почему Spinly</a>
+        <a href="#scenarios">Сценарии</a>
         <a href="#how">Как это работает</a>
         <a href="help.html">Инструкция</a>
-        <a class="btn" href="https://t.me/spinlyrollbot?startapp=campaigns" target="_blank" rel="noopener" data-cta="header">Открыть в Telegram</a>
+        <a class="btn" href="https://t.me/spinlyrollbot" target="_blank" rel="noopener">Запустить розыгрыш</a>
       </nav>
     </div>
   </header>
@@ -73,383 +33,338 @@
   <section class="hero">
     <div class="container hero__grid">
       <div>
-        <h1>Конструктор розыгрышей <span class="accent">внутри Telegram</span></h1>
-        <p class="lead">Полноценное приложение для розыгрышей - прямо в Telegram, без сторонних сайтов и регистраций. Моментальные розыгрыши и классические гивы, тонкая настройка и подробная статистика.</p>
+        <span class="hero__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          Telegram Mini App
+        </span>
+        <h1>Розыгрыши, которые <span class="accent">растят канал</span> и возвращают клиентов — прямо в Telegram</h1>
+        <p class="lead">Участник сразу видит результат. Вы видите, откуда пришла аудитория и что сработало. Запуск за пару минут — без сторонних сайтов и команд-ботов.</p>
         <div class="actions">
-          <a class="btn btn-lg" href="https://t.me/spinlyrollbot?startapp=campaigns" target="_blank" rel="noopener" data-cta="hero">Открыть в Telegram</a>
-          <a class="btn btn-ghost btn-lg" href="#ux">Смотреть возможности</a>
+          <a class="btn btn-lg" href="https://t.me/spinlyrollbot" target="_blank" rel="noopener">Запустить розыгрыш</a>
+          <a class="btn btn-ghost btn-lg" href="#how">Как это работает</a>
         </div>
         <ul class="hero__chips">
-          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Моментальные розыгрыши</li>
-          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Классические гивы</li>
-          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Подробная статистика</li>
-          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Уникальные механики</li>
+          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Возврат гостей</li>
+          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Рост подписчиков</li>
+          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Аналитика</li>
+          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Запуск за 2 минуты</li>
         </ul>
       </div>
-      <div class="phone-stack" aria-hidden="false">
-        <figure class="phone">
-          <img src="assets/shots/prize-detail.png" alt="Раскрытый приз участника" loading="eager" />
-        </figure>
-        <figure class="phone">
-          <img src="assets/shots/wheel-coffee.png" alt="Колесо фортуны в теме Coffee" loading="eager" />
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <div class="positioning reveal">
-    <div class="container positioning__inner">
-      <span class="positioning__old">Обычно розыгрыши настраивают в чат-ботах, где почти нет интерфейса</span>
-      <span class="positioning__new"><span class="positioning__arrow" aria-hidden="true">→</span> Spinly — это полноценное приложение с понятным экраном для каждого шага.</span>
-    </div>
-  </div>
-
-  <section class="section formats" id="formats">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2>Два типа розыгрышей - оба работают</h2>
-        <p class="lead">Моментальные — наш флагман для вовлечённости и возврата. Классические — для охвата и крупного приза. Выбирайте под цель.</p>
-      </div>
-      <div class="format-grid reveal-stagger">
-        <article class="format-card reveal">
-          <figure class="phone phone--sm">
-            <img src="assets/shots/wheel-coffee.png" alt="Колесо фортуны" loading="lazy" />
-          </figure>
-          <div class="format-card__body">
-            <span class="format-card__badge">Флагман</span>
-            <h3>Моментальный розыгрыш</h3>
-            <p class="format-card__example">Колесо фортуны</p>
-            <p>Участник крутит и сразу узнаёт результат. Победителей много.</p>
-            <p class="format-card__when-label">Почему сильнее</p>
-            <ul class="format-card__when">
-              <li>выше вовлечённость и азарт</li>
-              <li>мотивирует возвращаться снова</li>
-              <li>возврат клиентов, ежедневная активность, скидки и промокоды</li>
-            </ul>
-          </div>
-        </article>
-        <article class="format-card reveal">
-          <figure class="phone phone--sm">
-            <img src="assets/shots/giveaway-user.png" alt="Классический розыгрыш с обратным отсчётом" loading="lazy" />
-          </figure>
-          <div class="format-card__body">
-            <span class="format-card__badge format-card__badge--soft">Отложенный</span>
-            <h3>Классический розыгрыш</h3>
-            <p>Итоги подводятся в назначенное время, честный случайный выбор, один или несколько крупных призов.</p>
-            <p class="format-card__when-label">Свои плюсы</p>
-            <ul class="format-card__when">
-              <li>охват и привлечение подписчиков</li>
-              <li>розыгрыш ценного приза</li>
-              <li>для наглядности - визуальный таймер обратного отсчёта</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt compare" id="compare">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2>Что выбрать?</h2>
-      </div>
-      <div class="compare-heads reveal">
-        <div class="compare-head">
-          <figure class="phone phone--xs"><img src="assets/shots/wheel-coffee.png" alt="Колесо" /></figure>
-          <span class="compare-head__name">Моментальный</span>
-          <span class="compare-head__sub">Колесо фортуны</span>
+      <div class="hero__media">
+        <!-- вставить видео колеса/кейса: assets/video/hero-wheel.mp4 -->
+        <div class="media-slot" data-slot="hero-video" data-video="assets/video/hero-wheel.mp4" aria-label="ЗАГЛУШКА: вставить видео колеса/кейса">
+          <span class="media-slot__label">Вставить видео колеса/кейса</span>
+          <span class="media-slot__path">assets/video/hero-wheel.mp4</span>
         </div>
-        <div class="compare-head">
-          <figure class="phone phone--xs"><img src="assets/shots/giveaway-user.png" alt="Гив" /></figure>
-          <span class="compare-head__name">Классический</span>
-          <span class="compare-head__sub">Гив с таймером</span>
-        </div>
-      </div>
-      <div class="compare-wrap reveal">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col">Параметр</th>
-              <th scope="col">Моментальный</th>
-              <th scope="col">Классический</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Результат</th>
-              <td>Сразу, при участии</td>
-              <td>В назначенное время</td>
-            </tr>
-            <tr>
-              <th scope="row">Победителей</th>
-              <td>Много</td>
-              <td>Один или несколько</td>
-            </tr>
-            <tr>
-              <th scope="row">Приз</th>
-              <td>Скидки, бонусы, промокоды</td>
-              <td>Крупный ценный приз</td>
-            </tr>
-            <tr>
-              <th scope="row">Сильная сторона</th>
-              <td>Вовлечённость и возврат</td>
-              <td>Охват и рост подписчиков</td>
-            </tr>
-            <tr>
-              <th scope="row">Визуал</th>
-              <td>Колесо фортуны</td>
-              <td>Таймер обратного отсчёта</td>
-            </tr>
-          </tbody>
-        </table>
+        <figure class="phone">
+          <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо фортуны кофейни: гость крутит и сразу получает скидку или десерт" loading="eager" />
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="section ux" id="ux">
+  <section class="section section--dark" id="why">
     <div class="container">
-      <div class="section__head reveal">
-        <h2>Полноценный интерфейс, а не набор команд</h2>
-        <p class="lead">Обычные боты — это переписка с командами. Spinly - приложение с понятным экраном на каждый шаг: и для тех, кто участвует, и для тех, кто создаёт.</p>
+      <div class="section__head">
+        <span class="badge">Почему это работает</span>
+        <h2>Обычный розыгрыш в Telegram — разовый шум. Spinly — повод вернуться</h2>
+        <p class="lead">Хаос в комментариях, команды-боты, один всплеск охвата и ноль цифр. Spinly делает розыгрыш приложением: моментальный результат держит внимание, подписка растит канал, аналитика показывает, что сработало.</p>
       </div>
-      <div class="ux-grid reveal-stagger">
-        <article class="ux-card reveal">
+      <ul class="why-list">
+        <li>
+          <strong>Моментальный результат</strong>
+          Колесо и кейсы — участник крутит и сразу видит приз. Не «подождите неделю».
+        </li>
+        <li>
+          <strong>Канал растёт сам</strong>
+          Условие подписки, соавторство и рефералы приводят людей, а не только раздают призы.
+        </li>
+        <li>
+          <strong>Есть повод зайти снова</strong>
+          Бонусные попытки, докрутка и «каждую неделю новый победитель».
+        </li>
+        <li>
+          <strong>Видно, что окупилось</strong>
+          Воронка, «приведено по каналам», рефералы — не список победителей в таблице.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="retention">
+    <div class="container">
+      <article class="feature feature--wide">
+        <div class="feature__text">
+          <span class="badge">Удержание</span>
+          <h2>Гость крутит — и возвращается за новым спином</h2>
+          <p>Моментальный розыгрыш держит внимание: колесо или кейсы, результат сразу. Бонусные и периодические попытки, сектор «ещё раз», мульти-гив «каждую неделю новый победитель» — регулярный повод открыть канал и сделать заказ.</p>
+          <aside class="example">
+            <span class="example__label">Пример</span>
+            <p>Кофейня раздаёт скидки и десерты через колесо. Гость крутит после визита, приходит ещё раз за новым спином — и за новым заказом.</p>
+          </aside>
+        </div>
+        <div class="feature__media value-media">
+          <!-- видео вращения колеса/кейсов: assets/video/retention-spin.mp4 -->
+          <div class="media-slot" data-slot="retention-video" data-video="assets/video/retention-spin.mp4" aria-label="ЗАГЛУШКА: видео вращения колеса/кейсов">
+            <span class="media-slot__label">Видео вращения колеса/кейсов</span>
+            <span class="media-slot__path">assets/video/retention-spin.mp4</span>
+          </div>
+          <figure class="phone">
+            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни со скидками и десертами" loading="lazy" />
+          </figure>
+          <figure class="phone">
+            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа: стрижка, укладка, скидка" loading="lazy" />
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="growth">
+    <div class="container">
+      <article class="feature feature--wide">
+        <div class="feature__text">
+          <span class="badge">Рост канала</span>
+          <h2>Подписка, соавторство и рефералы — аудитория приходит сама</h2>
+          <p>Условие подписки включается, когда привязан канал. Соавторство — обмен аудиторией с партнёром. Рефералы — участники зовут друзей за попытками. Три рычага роста в одном розыгрыше.</p>
+          <aside class="example">
+            <span class="example__label">Пример</span>
+            <p>Блогер и партнёр проводят гив вдвоём. Каждый приводит своих — оба канала растут, а в статистике видно, кто сколько привёл.</p>
+          </aside>
+        </div>
+        <div class="feature__media value-media">
+          <figure class="phone">
+            <img src="assets/shots/coauthorship-mine.png" width="780" height="1688" alt="Мои соавторства: совместные розыгрыши с другими каналами" loading="lazy" />
+          </figure>
+          <figure class="phone" data-slot="stats-channels-img">
+            <img src="assets/shots/stats-channels.png" width="780" height="1688" alt="Сколько участников привёл каждый канал" loading="lazy" />
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="analytics">
+    <div class="container">
+      <article class="feature feature--wide">
+        <div class="feature__text">
+          <span class="badge">Аналитика и ROI</span>
+          <h2>Понятно, какой канал и какая механика принесли аудиторию</h2>
+          <p>Не просто список победителей. Воронка, «приведено по каналам», рефералы, динамика по всем розыгрышам. Видно, что сработало — и куда не стоит тратить приз.</p>
+        </div>
+        <div class="feature__media value-media">
+          <figure class="phone">
+            <img src="assets/shots/stats-overview.png" width="780" height="1688" alt="Динамика участников и общие цифры по розыгрышам" loading="lazy" />
+          </figure>
+          <figure class="phone">
+            <img src="assets/shots/stats-referrals.png" width="780" height="1688" alt="Реферальная программа и воронка приглашений" loading="lazy" />
+          </figure>
+          <!-- вставить кадр статистики / дашборда -->
+          <div class="media-slot" data-slot="stats-dashboard-img" aria-label="ЗАГЛУШКА: вставить кадр статистики">
+            <span class="media-slot__label">Вставить кадр статистики / дашборда</span>
+            <span class="media-slot__path">data-slot="stats-dashboard-img"</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="control">
+    <div class="container">
+      <article class="feature feature--wide">
+        <div class="feature__text">
+          <span class="badge">Контроль</span>
+          <h2>Полный интерфейс — не команды в чат с ботом</h2>
+          <p>Создаёте, публикуете и выдаёте призы в приложении. Команда канала работает с правами. Темы под бренд. Автоматизация выдачи — без таблиц и ручного разбора.</p>
+          <ul class="ticks ticks--light">
+            <li>Админка розыгрыша: участники, победители, публикация</li>
+            <li>Менеджеры каналов с правами на конкретный розыгрыш</li>
+            <li>Очередь выдачи и призы у участника в приложении</li>
+            <li>Темы колеса и кейсов под кофейню, салон, бренд</li>
+          </ul>
+        </div>
+        <div class="feature__media value-media">
+          <figure class="phone">
+            <img src="assets/shots/admin-wheel.png" width="780" height="1688" alt="Админка колеса: счётчики, публикация, призы" loading="lazy" />
+          </figure>
+          <figure class="phone">
+            <img src="assets/shots/admin-multi.png" width="780" height="1688" alt="Админка мульти-гива: тираж, таймер, призовой фонд" loading="lazy" />
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="scenarios">
+    <div class="container">
+      <div class="section__head">
+        <span class="badge">Это про вас</span>
+        <h2>Четыре сценария — подставьте свой бизнес</h2>
+        <p class="lead">Одна механика не для всех. Выберите формат под задачу: вернуть гостя, привести подписчика, удержать аудиторию неделю за неделей.</p>
+      </div>
+      <div class="scenario-grid">
+        <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/wheel-coffee.png" alt="Интерфейс для участников" loading="lazy" />
+            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни" loading="lazy" />
+          </figure>
+          <h3>Кофейня</h3>
+          <p>Колесо со скидками и десертами. Гость уходит с поводом вернуться — и крутит снова при следующем визите.</p>
+        </article>
+        <article class="scenario-card">
+          <figure class="phone phone--sm">
+            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" />
+          </figure>
+          <h3>Барбершоп</h3>
+          <p>Кейсы со стрижкой и укладкой, приз от спонсора. Со-маркетинг с соседним брендом без отдельной кампании.</p>
+        </article>
+        <article class="scenario-card">
+          <figure class="phone phone--sm">
+            <img src="assets/shots/giveaway-results-user.png" width="780" height="1688" alt="Итоги гива с победителями" loading="lazy" />
+          </figure>
+          <h3>Блогер</h3>
+          <p>Гив с крупным призом и соавторством. Охват двух каналов, подписка как условие, понятные итоги для аудитории.</p>
+        </article>
+        <article class="scenario-card">
+          <figure class="phone phone--sm">
+            <img src="assets/shots/admin-multi.png" width="780" height="1688" alt="Мульти-гив с еженедельным тиражом" loading="lazy" />
+          </figure>
+          <h3>Бренд</h3>
+          <p>Мульти-гив: каждую неделю новый победитель. Один розыгрыш — несколько поводов зайти и не отписаться.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="formats">
+    <div class="container">
+      <div class="section__head">
+        <span class="badge">Форматы</span>
+        <h2>Инструмент под задачу — не каталог фич</h2>
+        <p class="lead">Четыре формата. Выгода разная, запуск один и тот же.</p>
+      </div>
+      <div class="format-rows">
+        <article class="format-row">
+          <figure class="phone phone--sm">
+            <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Колесо фортуны" loading="lazy" />
           </figure>
           <div>
-            <h3>Для участников</h3>
-            <p>Красивое колесо, карточки призов и спонсоров, наглядный статус участия.</p>
+            <span class="format-card__badge">Моментальный</span>
+            <h3>Колесо</h3>
+            <p>Спин и сразу приз. Скидки, бонусы, «ещё раз» — возвращает гостя и даёт азарт без ожидания.</p>
           </div>
         </article>
-        <article class="ux-card reveal">
+        <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/edit-wheel-bottom.png" alt="Интерфейс для создателей" loading="lazy" />
+            <img src="assets/shots/cases-elegant.png" width="780" height="1688" alt="Кейсы" loading="lazy" />
           </figure>
           <div>
-            <h3>Для создателей</h3>
-            <p>Тонкая настройка: призы, вероятности, реферальная программа и попытки — без команд и таблиц.</p>
+            <span class="format-card__badge">Моментальный</span>
+            <h3>Кейсы</h3>
+            <p>Та же мгновенная награда, другой визуал. Лента карточек под салон, бренд или фитнес.</p>
+          </div>
+        </article>
+        <article class="format-row">
+          <figure class="phone phone--sm">
+            <img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Гив с таймером" loading="lazy" />
+          </figure>
+          <div>
+            <span class="format-card__badge">По таймеру</span>
+            <h3>Гив</h3>
+            <p>Крупный приз и обратный отсчёт. Охват, инфоповод, рост подписчиков к дате розыгрыша.</p>
+          </div>
+        </article>
+        <article class="format-row">
+          <figure class="phone phone--sm">
+            <img src="assets/shots/admin-multi.png" width="780" height="1688" alt="Мульти-гив" loading="lazy" />
+          </figure>
+          <div>
+            <span class="format-card__badge">Тиражами</span>
+            <h3>Мульти-гив</h3>
+            <p>Серия победителей по расписанию. Удержание: каждую неделю новый итог в том же розыгрыше.</p>
           </div>
         </article>
       </div>
-    </div>
-  </section>
 
-  <section class="section section--dark stats" id="stats">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2>Глубокая статистика</h2>
-        <p class="lead">Видно всё — от первого показа до победителя, с разбивкой по источникам.</p>
-      </div>
-      <div class="shot-grid shot-grid--4 reveal-stagger">
-        <figure class="shot-tile reveal">
-          <div class="phone phone--sm">
-            <img src="assets/shots/stats-overview.png" alt="Динамика и общие показатели" loading="lazy" />
-          </div>
-          <figcaption>Динамика и общие показатели по всем розыгрышам</figcaption>
-        </figure>
-        <figure class="shot-tile reveal">
-          <div class="phone phone--sm">
-            <img src="assets/shots/stats-campaign.png" alt="Статистика розыгрыша" loading="lazy" />
-          </div>
-          <figcaption>Детальная статистика конкретного розыгрыша</figcaption>
-        </figure>
-        <figure class="shot-tile reveal">
-          <div class="phone phone--sm">
-            <img src="assets/shots/stats-channels.png" alt="Статистика по каналам" loading="lazy" />
-          </div>
-          <figcaption>Какой канал сколько участников привёл</figcaption>
-        </figure>
-        <figure class="shot-tile reveal">
-          <div class="phone phone--sm">
-            <img src="assets/shots/stats-referral.png" alt="Реферальная воронка" loading="lazy" />
-          </div>
-          <figcaption>Реферальная воронка: кто и сколько привёл друзей</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section themes" id="themes">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2>Темы под ваш бренд</h2>
-        <p class="lead">Оформление колеса под стиль вашего бизнеса; премиум-темы — за звёзды Telegram</p>
-      </div>
-      <div class="theme-gallery reveal-stagger">
-        <figure class="shot-tile reveal">
-          <div class="phone phone--xs">
-            <img src="assets/shots/wheel-telegram.png" alt="Тема Telegram" loading="lazy" />
-          </div>
-          <figcaption>Telegram</figcaption>
-        </figure>
-        <figure class="shot-tile reveal">
-          <div class="phone phone--xs">
-            <img src="assets/shots/wheel-coffee.png" alt="Тема Coffee" loading="lazy" />
-          </div>
-          <figcaption>Coffee</figcaption>
-        </figure>
-        <figure class="shot-tile reveal">
-          <div class="phone phone--xs">
-            <img src="assets/shots/wheel-barber.png" alt="Тема Barber" loading="lazy" />
-          </div>
-          <figcaption>Barber</figcaption>
-        </figure>
-        <figure class="shot-tile reveal">
-          <div class="phone phone--xs">
-            <img src="assets/shots/wheel-elegant.png" alt="Тема Elegant" loading="lazy" />
-          </div>
-          <figcaption>Elegant</figcaption>
-        </figure>
-        <figure class="shot-tile reveal">
-          <div class="phone phone--xs">
-            <img src="assets/shots/wheel-fresh.png" alt="Тема Fresh" loading="lazy" />
-          </div>
-          <figcaption>Fresh</figcaption>
-        </figure>
-        <figure class="shot-tile reveal">
-          <div class="phone phone--xs">
-            <img src="assets/shots/wheel-luxury.png" alt="Тема Luxury" loading="lazy" />
-          </div>
-          <figcaption>Luxury</figcaption>
-        </figure>
-      </div>
-      <figure class="theme-list reveal">
-        <div class="phone">
-          <img src="assets/shots/wheel-themes.png" alt="Список тем оформления колеса" loading="lazy" />
+      <div class="themes">
+        <h3 class="themes__title">Темы под бренд — без дизайнера</h3>
+        <p class="lead themes__lead">Колесо и кейсы в готовых стилях. Выбрали тему — гости видят ваш характер, а не «ещё один бот».</p>
+        <div class="theme-gallery">
+          <figure class="theme-tile">
+            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Тема Coffee" loading="lazy" />
+            <figcaption>Coffee</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/wheel-barber.png" width="780" height="1688" alt="Тема Barber" loading="lazy" />
+            <figcaption>Barber</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/wheel-elegant.png" width="780" height="1688" alt="Тема Elegant" loading="lazy" />
+            <figcaption>Elegant</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/wheel-fresh.png" width="780" height="1688" alt="Тема Fresh" loading="lazy" />
+            <figcaption>Fresh</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Тема Luxury" loading="lazy" />
+            <figcaption>Luxury</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/wheel-telegram.png" width="780" height="1688" alt="Классическая тема Telegram" loading="lazy" />
+            <figcaption>Telegram</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы Barber" loading="lazy" />
+            <figcaption>Кейсы · Barber</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/cases-fitness.png" width="780" height="1688" alt="Кейсы Fitness" loading="lazy" />
+            <figcaption>Кейсы · Fitness</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы Luxury" loading="lazy" />
+            <figcaption>Кейсы · Luxury</figcaption>
+          </figure>
+          <figure class="theme-tile">
+            <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Кейсы Telegram" loading="lazy" />
+            <figcaption>Кейсы · Telegram</figcaption>
+          </figure>
         </div>
-        <figcaption>Выберите тему в списке и сразу увидите, как колесо выглядит участнику.</figcaption>
-      </figure>
+      </div>
     </div>
   </section>
 
-  <section class="section advantages" id="features">
+  <section class="section section--dark" id="how">
     <div class="container">
-      <div class="section__head reveal">
-        <h2>Уникальные механики и точечная настройка</h2>
-        <p class="lead">Уникальные механики и точечная настройка, которых нет в обычных ботах-рандомайзерах.</p>
+      <div class="section__head">
+        <span class="badge">3 шага</span>
+        <h2>Как начать</h2>
+        <p class="lead">От создания до призов у участников — без рутины и сторонних сайтов.</p>
       </div>
-      <div class="adv-grid reveal-stagger">
-        <article class="adv-card reveal">
-          <div class="adv-card__icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Реферальная программа</h3>
-          <p>С трекингом «кто сколько привёл» — рост аудитории через друзей.</p>
-        </article>
-        <article class="adv-card reveal">
-          <div class="adv-card__icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/></svg>
-          </div>
-          <h3>Бонусные попытки</h3>
-          <p>Периодические попытки возвращают аудиторию снова и снова.</p>
-        </article>
-        <article class="adv-card reveal">
-          <div class="adv-card__icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Соавторство и мультиканал</h3>
-          <p>Обмен аудиторией: совместный розыгрыш и несколько каналов в одном.</p>
-        </article>
-        <article class="adv-card reveal">
-          <div class="adv-card__icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg>
-          </div>
-          <h3>Тонкая конфигурация</h3>
-          <p>Лимиты призов, «пустышки», «ещё раз», настройка вероятностей.</p>
-        </article>
-        <article class="adv-card reveal">
-          <div class="adv-card__icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15v-4"/><path d="M12 15V8"/><path d="M16 15v-6"/></svg>
-          </div>
-          <h3>Подробная статистика</h3>
-          <p>Воронка, источники, динамика — видно, что реально работает.</p>
-        </article>
-        <article class="adv-card reveal">
-          <div class="adv-card__icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
-          </div>
-          <h3>Под ваш бренд</h3>
-          <p>Темы оформления колеса и кастомизация под фирменный стиль.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--dark coauthor" id="coauthor">
-    <div class="container coauthor__grid">
-      <div class="coauthor__media reveal">
-        <figure class="phone">
-          <img src="assets/shots/coauthorship-mine.png" alt="Мои соавторства и каналы" loading="lazy" />
-        </figure>
-      </div>
-      <div class="coauthor__text reveal">
-        <h2>Растите вместе с другими каналами</h2>
-        <p class="lead">Соавторство — механика роста: проводите розыгрыш совместно, обменивайтесь аудиторией, добавляйте несколько каналов в один розыгрыш.</p>
-        <ul class="coauthor__list">
-          <li>Совместный розыгрыш с другими каналами — обмен аудиторией.</li>
-          <li>Условие подписки на всех соавторов — каждый канал растёт.</li>
-          <li>Несколько своих каналов в одном розыгрыше — добавляются в один тап.</li>
-          <li>Приглашения по ссылке или напрямую — соавтор подтверждает участие.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="how">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2>Как это работает</h2>
-        <p class="lead">От создания до победителей — без рутины и текстовых команд.</p>
-      </div>
-      <div class="steps reveal-stagger">
-        <article class="step reveal">
+      <div class="steps">
+        <article class="step">
           <span class="step__num">1</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/edit-wheel-top.png" alt="Основные данные розыгрыша" loading="lazy" />
+            <img src="assets/shots/create-referrals.png" width="780" height="1688" alt="Создание розыгрыша: попытки и рефералы" loading="lazy" />
           </figure>
-          <h3>Основные данные</h3>
-          <p>Название, описание и тип розыгрыша — в понятном экране.</p>
+          <h3>Соберите розыгрыш</h3>
+          <p>Формат, призы, попытки. Пара минут — и механика готова.</p>
         </article>
-        <article class="step reveal">
+        <article class="step">
           <span class="step__num">2</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/create-prize-giveaway.png" alt="Создание призов" loading="lazy" />
+            <img src="assets/shots/publish-channels.png" width="780" height="1688" alt="Публикация поста в каналах" loading="lazy" />
           </figure>
-          <h3>Создание призов</h3>
-          <p>Добавьте призы: название, цвет, иконка; лимиты выдачи, вероятности и «пустышки».</p>
+          <h3>Опубликуйте в канал</h3>
+          <p>Пост с кнопкой уходит в один или несколько каналов.</p>
         </article>
-        <article class="step reveal">
+        <article class="step">
           <span class="step__num">3</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/admin-channels.png" alt="Добавление канала и соавторов" loading="lazy" />
+            <img src="assets/shots/prize-detail.png" width="780" height="1688" alt="Приз у участника в приложении" loading="lazy" />
           </figure>
-          <h3>Добавление канала</h3>
-          <p>Привяжите канал-организатор (бот админом) — он же условие подписки.</p>
-        </article>
-        <article class="step reveal">
-          <span class="step__num">4</span>
-          <figure class="phone phone--sm">
-            <img src="assets/shots/wheel-themes.png" alt="Кастомизация колеса" loading="lazy" />
-          </figure>
-          <h3>Кастомизация колеса</h3>
-          <p>Выберите тему оформления колеса под свой бренд.</p>
-        </article>
-        <article class="step reveal">
-          <span class="step__num">5</span>
-          <figure class="phone phone--sm">
-            <img src="assets/shots/publish-multi.png" alt="Публикация в каналы" loading="lazy" />
-          </figure>
-          <h3>Публикация</h3>
-          <p>Опубликуйте пост с кнопкой сразу в несколько каналов — за секунды.</p>
-        </article>
-        <article class="step reveal">
-          <span class="step__num">6</span>
-          <figure class="phone phone--sm">
-            <img src="assets/shots/prize-detail.png" alt="Победители получают призы" loading="lazy" />
-          </figure>
-          <h3>Победители получают призы</h3>
-          <p>Участники играют, победители получают призы автоматически.</p>
+          <h3>Призы уходят сами</h3>
+          <p>Участник видит результат сразу. Выдача — в приложении, без таблиц.</p>
         </article>
       </div>
     </div>
@@ -457,9 +372,9 @@
 
   <section class="cta" id="cta">
     <div class="container">
-      <h2>Запустите первый розыгрыш за 2 минуты</h2>
-      <p class="lead">Откройте приложение в Telegram и создайте розыгрыш без сложных настроек.</p>
-      <a class="btn btn-lg" href="https://t.me/spinlyrollbot?startapp=campaigns" target="_blank" rel="noopener" data-cta="final">Открыть в Telegram</a>
+      <h2>Запустите розыгрыш, который работает на рост</h2>
+      <p class="lead">Откройте бота в Telegram — первый розыгрыш за пару минут.</p>
+      <a class="btn btn-lg" href="https://t.me/spinlyrollbot" target="_blank" rel="noopener">Запустить розыгрыш</a>
       <div><a class="cta-link" href="help.html">Подробная инструкция →</a></div>
     </div>
   </section>
@@ -471,7 +386,7 @@
         Spinly
       </a>
       <span>© Spinly</span>
-      <a href="https://t.me/spinlyrollbot" target="_blank" rel="noopener" data-cta="footer">@spinlyrollbot</a>
+      <a href="https://t.me/spinlyrollbot" target="_blank" rel="noopener">@spinlyrollbot</a>
     </div>
   </footer>
 
