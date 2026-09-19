@@ -32,31 +32,12 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeLb();
   });
-  document.querySelectorAll(".phone img, .theme-tile img").forEach((img) => {
+  document.querySelectorAll(".phone img, .theme-tile img, .hero__fan-card").forEach((img) => {
     img.addEventListener("click", (e) => {
       e.stopPropagation();
       lbImg.src = img.currentSrc || img.src;
       lbImg.alt = img.alt || "";
       lightbox.classList.add("is-open");
-    });
-  });
-
-  document.querySelectorAll(".media-slot[data-video]").forEach((slot) => {
-    const src = slot.getAttribute("data-video");
-    if (!src) return;
-    const video = document.createElement("video");
-    video.muted = true;
-    video.autoplay = true;
-    video.loop = true;
-    video.playsInline = true;
-    video.setAttribute("playsinline", "");
-    video.setAttribute("muted", "");
-    video.preload = "metadata";
-    video.src = src;
-    video.addEventListener("loadeddata", () => {
-      slot.classList.add("is-filled");
-      slot.replaceChildren(video);
-      video.play().catch(() => {});
     });
   });
 

@@ -41,6 +41,10 @@
         <a href="#scenarios">Сценарии</a>
         <a href="#how">Как это работает</a>
         <a href="help.html">Инструкция</a>
+        <a class="nav-tg" href="https://t.me/spinlyroll" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          Канал
+        </a>
         <a class="btn btn-sm" href="https://t.me/spinlyrollbot/app?startapp=campaigns" target="_blank" rel="noopener">Запустить розыгрыш</a>
       </nav>
     </div>
@@ -63,14 +67,11 @@
         </ul>
       </div>
       <div class="hero__media">
-        <!-- вставить видео колеса/кейса: assets/video/hero-wheel.mp4 -->
-        <div class="media-slot" data-slot="hero-video" data-video="assets/video/hero-wheel.mp4" aria-label="ЗАГЛУШКА: вставить видео колеса/кейса">
-          <span class="media-slot__label">Вставить видео колеса/кейса</span>
-          <span class="media-slot__path">assets/video/hero-wheel.mp4</span>
+        <div class="hero__fan">
+          <img class="hero__fan-card hero__fan-card--left" src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Гив: розыгрыш призов и список победителей" loading="eager" />
+          <img class="hero__fan-card hero__fan-card--center" src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо фортуны: мгновенный приз" loading="eager" />
+          <img class="hero__fan-card hero__fan-card--right" src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы: азартное открытие приза" loading="eager" />
         </div>
-        <figure class="phone">
-          <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо фортуны кофейни: гость крутит и сразу получает скидку или десерт" loading="eager" />
-        </figure>
       </div>
     </div>
   </section>
@@ -116,11 +117,6 @@
           </aside>
         </div>
         <div class="feature__media value-media">
-          <!-- видео вращения колеса/кейсов: assets/video/retention-spin.mp4 -->
-          <div class="media-slot" data-slot="retention-video" data-video="assets/video/retention-spin.mp4" aria-label="ЗАГЛУШКА: видео вращения колеса/кейсов">
-            <span class="media-slot__label">Видео вращения колеса/кейсов</span>
-            <span class="media-slot__path">assets/video/retention-spin.mp4</span>
-          </div>
           <figure class="phone">
             <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни со скидками и десертами" loading="lazy" />
           </figure>
@@ -171,11 +167,23 @@
           <figure class="phone">
             <img src="assets/shots/stats-referrals.png" width="780" height="1688" alt="Реферальная программа и воронка приглашений" loading="lazy" />
           </figure>
-          <!-- вставить кадр статистики / дашборда -->
-          <div class="media-slot" data-slot="stats-dashboard-img" aria-label="ЗАГЛУШКА: вставить кадр статистики">
-            <span class="media-slot__label">Вставить кадр статистики / дашборда</span>
-            <span class="media-slot__path">data-slot="stats-dashboard-img"</span>
-          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="antibot">
+    <div class="container">
+      <article class="feature feature--wide">
+        <div class="feature__text">
+          <span class="badge">Защита от ботов</span>
+          <h2>Фильтр ботов — честный розыгрыш без накрутки</h2>
+          <p>Три уровня — мягко, средне, строго. Для каждого розыгрыша свои условия: нет аватарки или username, «молодой» аккаунт, участие сразу после входа. Подозрительных можно пометить или заблокировать. Это фильтр ботов, а не стопроцентная защита.</p>
+        </div>
+        <div class="feature__media value-media">
+          <figure class="phone">
+            <img src="assets/shots/antibot-settings.png" width="780" height="1688" alt="Настройки антибота: условия отсева подозрительных участников" loading="lazy" />
+          </figure>
         </div>
       </article>
     </div>
@@ -195,12 +203,18 @@
             <li>Темы колеса и кейсов под кофейню, салон, бренд</li>
           </ul>
         </div>
-        <div class="feature__media value-media">
+        <div class="feature__media value-media value-media--quad">
           <figure class="phone">
             <img src="assets/shots/admin-wheel.png" width="780" height="1688" alt="Админка колеса: счётчики, публикация, призы" loading="lazy" />
           </figure>
           <figure class="phone">
             <img src="assets/shots/admin-multi.png" width="780" height="1688" alt="Админка мульти-гива: тираж, таймер, призовой фонд" loading="lazy" />
+          </figure>
+          <figure class="phone">
+            <img src="assets/shots/team-admins.png" width="780" height="1688" alt="Настройка админов и прав в розыгрыше" loading="lazy" />
+          </figure>
+          <figure class="phone">
+            <img src="assets/shots/notifications.png" width="780" height="1688" alt="Настройки уведомлений участникам" loading="lazy" />
           </figure>
         </div>
       </article>
@@ -231,7 +245,7 @@
         </article>
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/giveaway-results-user.png" width="780" height="1688" alt="Итоги гива с победителями" loading="lazy" />
+            <img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Итоги гива с победителями" loading="lazy" />
           </figure>
           <h3>Блогер</h3>
           <p>Гив с крупным призом и соавторством. Охват двух каналов, подписка как условие, понятные итоги для аудитории.</p>
@@ -399,7 +413,10 @@
       </a>
       <span>© Spinly</span>
       <a href="https://t.me/spinlyrollbot" target="_blank" rel="noopener">@spinlyrollbot</a>
-      <a href="https://t.me/spinlyroll" target="_blank" rel="noopener">Spinly News</a>
+      <a class="nav-tg" href="https://t.me/spinlyroll" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+        Spinly News
+      </a>
     </div>
   </footer>
 

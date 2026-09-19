@@ -82,12 +82,34 @@ a:hover { color: var(--brand-orange-600); }
   align-items: center;
   gap: 8px 22px;
 }
-.nav a:not(.btn) {
+.nav a:not(.btn):not(.nav-tg) {
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.95rem;
   font-weight: 500;
 }
-.nav a:not(.btn):hover { color: #fff; }
+.nav a:not(.btn):not(.nav-tg):hover { color: #fff; }
+
+.nav-tg {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 158, 217, 0.45);
+  background: rgba(34, 158, 217, 0.14);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.nav-tg svg {
+  flex-shrink: 0;
+  color: #229ED9;
+}
+.nav-tg:hover {
+  color: #fff;
+  background: rgba(34, 158, 217, 0.26);
+  border-color: rgba(34, 158, 217, 0.7);
+}
 
 .nav-toggle {
   display: none;
@@ -221,12 +243,8 @@ a:hover { color: var(--brand-orange-600); }
   align-items: start;
 }
 .feature--wide .feature__text { max-width: 740px; }
-.feature--wide .value-media { justify-content: flex-start; }
+.feature--wide .value-media { justify-content: center; }
 .feature--wide .value-media .phone { width: min(250px, 28vw); }
-.feature--wide .value-media .media-slot {
-  max-width: 250px;
-  min-height: 360px;
-}
 
 .phone {
   width: min(280px, 78vw);
@@ -273,8 +291,8 @@ a:hover { color: var(--brand-orange-600); }
 }
 .hero__grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 36px;
   align-items: center;
 }
 .hero h1 {
@@ -754,61 +772,39 @@ a:hover { color: var(--brand-orange-600); }
 }
 
 .hero__media {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  align-items: stretch;
-}
-.hero__media .phone { width: 100%; max-width: 280px; justify-self: center; }
-.hero__media .media-slot { min-height: 420px; }
-
-.media-slot {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 280px;
-  padding: 24px 16px;
-  border: 2px dashed rgba(249, 134, 46, 0.55);
-  border-radius: var(--radius);
-  background: rgba(249, 134, 46, 0.07);
-  text-align: center;
-  color: var(--muted);
+  align-items: center;
 }
-.section--dark .media-slot,
-.hero .media-slot {
-  border-color: rgba(249, 134, 46, 0.55);
-  background: rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.72);
+.hero__fan {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 420px;
+  padding: 12px 0 4px;
 }
-.media-slot__label {
-  font-size: 0.92rem;
-  font-weight: 700;
-  line-height: 1.4;
-  max-width: 16em;
+.hero__fan-card {
+  width: 210px;
+  height: auto;
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgba(20, 21, 38, 0.28);
+  position: relative;
+  cursor: zoom-in;
 }
-.media-slot__path {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.72rem;
-  font-weight: 500;
-  opacity: 0.75;
-  word-break: break-all;
+.hero__fan-card--center {
+  z-index: 3;
+  width: 236px;
 }
-.media-slot.is-filled {
-  border-style: solid;
-  border-color: transparent;
-  background: transparent;
-  padding: 0;
-  min-height: 0;
+.hero__fan-card--left {
+  z-index: 2;
+  transform: rotate(-9deg) translateX(28px);
+  margin-right: -70px;
 }
-.media-slot.is-filled video {
-  width: 100%;
-  max-height: 520px;
-  border-radius: 22px;
-  display: block;
-  object-fit: cover;
-  box-shadow: var(--shadow-phone);
+.hero__fan-card--right {
+  z-index: 2;
+  transform: rotate(9deg) translateX(-28px);
+  margin-left: -70px;
 }
 
 .why-list {
@@ -890,12 +886,13 @@ a:hover { color: var(--brand-orange-600); }
   width: 100%;
 }
 .value-media .phone { width: min(230px, 42vw); }
-.value-media .media-slot {
-  flex: 1 1 180px;
-  min-width: 160px;
-  max-width: 230px;
-  min-height: 320px;
+.value-media--quad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 12px;
 }
+.value-media--quad .phone { width: 100%; max-width: 230px; }
 
 .scenario-grid {
   display: grid;
@@ -1015,7 +1012,6 @@ a:hover { color: var(--brand-orange-600); }
 
 @media (max-width: 960px) {
   .hero__grid,
-  .hero__media,
   .feature,
   .feature--flip,
   .coauthor__grid,
@@ -1025,15 +1021,27 @@ a:hover { color: var(--brand-orange-600); }
   .grid-3, .steps { grid-template-columns: 1fr; }
   .why-list, .scenario-grid { grid-template-columns: repeat(2, 1fr); }
   .theme-gallery { grid-template-columns: repeat(2, 1fr); }
+  .value-media--quad { grid-template-columns: repeat(2, 1fr); }
   .help-layout { grid-template-columns: 1fr; }
   .toc { display: none; }
   .toc-mobile { display: block; }
   .positioning__inner { flex-direction: column; align-items: center; }
-  .hero__media .media-slot { min-height: 220px; }
   .value-media .phone,
   .feature--wide .value-media .phone { width: min(230px, 70vw); }
-  .feature--wide .value-media .media-slot { max-width: none; min-height: 220px; }
   .format-row { justify-items: center; text-align: left; }
+}
+
+@media (max-width: 860px) {
+  .hero__media,
+  .feature__media,
+  .value-media,
+  .feature--wide .value-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .feature__media img,
+  .value-media img { margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 720px) {
@@ -1051,7 +1059,8 @@ a:hover { color: var(--brand-orange-600); }
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
   .nav.is-open { display: flex; }
-  .nav a:not(.btn) { padding: 12px 10px; }
+  .nav a:not(.btn):not(.nav-tg) { padding: 12px 10px; }
+  .nav .nav-tg { align-self: flex-start; margin: 8px 0; }
   .nav .btn { width: 100%; margin-top: 8px; }
   .section { padding: 64px 0; }
   .hero { padding: 48px 0 64px; }
@@ -1060,6 +1069,14 @@ a:hover { color: var(--brand-orange-600); }
   .site-header__inner { position: relative; }
   .scenario-grid,
   .why-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .hero__fan { min-height: 340px; }
+  .hero__fan-card { width: 150px; }
+  .hero__fan-card--center { width: 168px; }
+  .hero__fan-card--left { margin-right: -50px; transform: rotate(-8deg) translateX(16px); }
+  .hero__fan-card--right { margin-left: -50px; transform: rotate(8deg) translateX(-16px); }
 }
 
 /* ---- Spinly wheel widget (FAB + modal) --------------------------------- */
