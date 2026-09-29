@@ -183,3 +183,38 @@
   });
 })();
 
+/* --- Атрибуция (src → startapp) + цели Яндекс.Метрики на клики по ТГ --- */
+(function () {
+  var YM_ID = 112670514;
+  var goal = function (name) {
+    try { if (window.ym) window.ym(YM_ID, 'reachGoal', name); } catch (e) {}
+  };
+
+  var raw = new URLSearchParams(location.search).get('src');
+  var src = raw && /^promo_[a-z0-9_-]+$/i.test(raw) ? raw : null;
+
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var u;
+    try { u = new URL(a.href, location.href); } catch (e) { return; }
+    var host = u.hostname.replace(/^www\./, '');
+
+    var isBotApp  = host === 't.me' && /^\/spinlyrollbot\/app\b/i.test(u.pathname);
+    var isBot     = host === 't.me' && /^\/spinlyrollbot\/?$/i.test(u.pathname);
+    var isChannel = host === 't.me' && /^\/spinlyroll\/?$/i.test(u.pathname);
+
+    var changed = false;
+    // 1) Ссылки на мини-апп/бота: метка едет в startapp (перезаписывает campaigns — для промо это ок).
+    if (src && (isBotApp || isBot)) { u.searchParams.set('startapp', src); changed = true; }
+    // 2) Метка переносится на внутренние страницы, чтобы пережить переход index↔help.
+    if (src && host === location.hostname && /\.html?$/i.test(u.pathname)) {
+      u.searchParams.set('src', src); changed = true;
+    }
+    if (changed) a.href = u.toString();
+
+    // 3) Цели Метрики.
+    if (isBotApp) a.addEventListener('click', function () { goal('open_app'); });
+    else if (isBot) a.addEventListener('click', function () { goal('open_bot'); });
+    else if (isChannel) a.addEventListener('click', function () { goal('open_channel'); });
+  });
+})();
+
