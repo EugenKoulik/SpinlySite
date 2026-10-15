@@ -1,0 +1,268 @@
+/* ============================================================
+   pages.css — компоненты для внутренних страниц
+   (how.html, streak.html, faq.html, partners.html).
+   Подключается ПОСЛЕ styles.css и использует её токены.
+   ============================================================ */
+
+/* — универсальная «петля» геймификации — */
+.loop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.loop__step {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+}
+.loop__step .loop__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #fff;
+  background: var(--brand-orange);
+  margin-bottom: 12px;
+}
+.loop__step h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.loop__step p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.loop__step::after {
+  content: "→";
+  position: absolute;
+  right: -11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brand-orange);
+  font-weight: 800;
+  z-index: 2;
+}
+.loop__step:last-child::after { content: none; }
+.section--dark .loop__step {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+.section--dark .loop__step p { color: rgba(255, 255, 255, 0.70); }
+
+/* — сетка «фич/принципов» — */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 26px;
+}
+.feature {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+}
+.section--alt .feature { background: var(--surface); }
+.feature__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: rgba(249, 134, 46, 0.12);
+  margin-bottom: 12px;
+}
+.feature h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.feature p { margin: 0; color: var(--muted); }
+
+/* — примеры/сценарии «задача → настройка → результат» — */
+.example {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 18px;
+}
+.example > div { padding: 20px; }
+.example > div + div { border-left: 1px solid var(--border); }
+.example__seg-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--brand-orange);
+  margin: 0 0 8px;
+}
+.example h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.example p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.example ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; }
+.example ul li { margin: 4px 0; }
+
+/* — FAQ-аккордеон (native details/summary) — */
+.faq { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 48px 16px 18px;
+  position: relative;
+  font-weight: 650;
+  font-size: 1.02rem;
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary::after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--brand-orange);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] > summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq-item__body { padding: 0 18px 18px; color: var(--muted); }
+.faq-item__body p { margin: 0 0 10px; }
+.faq-item__body p:last-child { margin-bottom: 0; }
+
+/* — бейдж «скоро / новинка» — */
+.soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: var(--brand-orange-600);
+  background: rgba(249, 134, 46, 0.14);
+}
+
+/* — стрик: полоса дней — */
+.streak-strip {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  justify-content: center;
+}
+.streak-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 72px;
+}
+.streak-dot {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.05rem;
+  border: 2px solid var(--border);
+  color: var(--muted);
+  background: var(--surface);
+}
+.streak-dot--done {
+  border-color: transparent;
+  background: rgba(29, 158, 117, 0.14);
+  color: #1D9E75;
+}
+.streak-dot--today {
+  border-color: var(--brand-orange);
+  color: var(--brand-orange);
+}
+.streak-day small { font-size: 0.72rem; color: var(--muted); }
+.streak-bonus { font-size: 0.72rem; color: var(--brand-orange-600); font-weight: 700; }
+
+/* — мини-лидерборд — */
+.mini-board {
+  margin-top: 22px;
+  max-width: 420px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mini-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.mini-row__place {
+  width: 24px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--muted);
+}
+.mini-row--top .mini-row__place { color: var(--brand-orange); }
+.mini-row__name { flex: 1; font-weight: 600; }
+.mini-row__pts { font-weight: 800; color: #C9961E; }
+
+/* — крупная «витрина скоро» (тарифы/партнёрка) — */
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 26px;
+}
+.teaser-card {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  background: linear-gradient(135deg, rgba(249, 134, 46, 0.07), var(--surface) 70%);
+}
+.teaser-card h3 { margin: 10px 0 8px; font-size: 1.2rem; }
+.teaser-card p { margin: 0; color: var(--muted); }
+
+/* — узкий информативный блок-заметка — */
+.note-card {
+  margin-top: 22px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand-orange);
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: var(--surface-alt);
+  color: var(--muted);
+}
+.note-card strong { color: var(--ink); }
+
+/* — адаптив — */
+@media (max-width: 860px) {
+  .loop { grid-template-columns: repeat(2, 1fr); }
+  .loop__step:nth-child(2)::after { content: none; }
+  .example { grid-template-columns: 1fr; }
+  .example > div + div { border-left: none; border-top: 1px solid var(--border); }
+}
+@media (max-width: 520px) {
+  .loop { grid-template-columns: 1fr; }
+  .loop__step::after {
+    content: "↓";
+    right: 50%;
+    top: auto;
+    bottom: -13px;
+    transform: translateX(50%);
+  }
+}
