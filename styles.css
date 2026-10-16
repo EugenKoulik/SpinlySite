@@ -1246,3 +1246,152 @@ a:hover { color: var(--brand-orange-600); }
 @media (max-width: 480px) {
   .spinly-fab { right: 16px; bottom: 16px; }
 }
+
+/* ---- Доп. компоненты главной (не конфликтуют с pages.css) -------------- */
+
+/* Подсветка ключевых фраз в тексте */
+.hl {
+  background: linear-gradient(transparent 62%, rgba(249, 134, 46, 0.28) 62%);
+  color: inherit;
+  padding: 0 1px;
+  font-weight: 600;
+}
+.section--dark .hl { background: linear-gradient(transparent 62%, rgba(249, 134, 46, 0.45) 62%); }
+
+/* Бейдж «Новинка» */
+.pill-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #1D9E75;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* Нарратив-полоса «конструктор геймификации» */
+.pitch {
+  background: var(--navy-800);
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.pitch__inner { max-width: 900px; margin-inline: auto; text-align: center; }
+.pitch p {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Полоса дней стрика (CSS, без скриншота) */
+.streak-strip {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+.streak-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 68px;
+}
+.streak-dot {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
+}
+.streak-dot--done {
+  border-color: transparent;
+  background: rgba(29, 158, 117, 0.22);
+  color: #5BD3A6;
+}
+.streak-dot--today {
+  border-color: var(--brand-orange);
+  color: var(--brand-orange);
+}
+.streak-day small { font-size: 0.72rem; color: rgba(255, 255, 255, 0.6); }
+.streak-bonus { font-size: 0.72rem; color: var(--brand-orange); font-weight: 700; min-height: 1em; }
+
+/* Конструктор постов: развилка публикации */
+.pub-split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 26px;
+}
+.pub-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+}
+.pub-card__tag {
+  display: inline-flex;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(249, 134, 46, 0.14);
+  color: var(--brand-orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.pub-card h3 { margin: 0 0 8px; font-size: 1.15rem; letter-spacing: -0.02em; }
+.pub-card p { margin: 0 0 10px; color: var(--muted); font-size: 0.98rem; }
+.pub-card p:last-child { margin-bottom: 0; }
+.pub-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+  justify-content: center;
+}
+.pub-steps__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.pub-steps__item b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand-orange);
+  color: #fff;
+  font-size: 0.8rem;
+}
+.pub-steps__arrow { color: var(--brand-orange); font-weight: 800; align-self: center; }
+
+@media (max-width: 720px) {
+  .pub-split { grid-template-columns: 1fr; }
+  .pub-steps__arrow { display: none; }
+}

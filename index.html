@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spinly — розыгрыши, которые растят канал и возвращают аудиторию</title>
-  <meta name="description" content="Розыгрыши в Telegram под любую задачу: гив, колесо, кейсы, мульти-гив. Привлекайте и удерживайте аудиторию, смотрите аналитику — запуск за пару минут, без сторонних сайтов." />
-  <meta property="og:title" content="Spinly — розыгрыши, которые растят канал и возвращают аудиторию" />
-  <meta property="og:description" content="Розыгрыши в Telegram под любую задачу: гив, колесо, кейсы, мульти-гив. Привлекайте и удерживайте аудиторию, смотрите аналитику — запуск за пару минут, без сторонних сайтов." />
+  <title>Spinly — конструктор геймификации для Telegram: розыгрыши и стрик-квиз</title>
+  <meta name="description" content="Spinly — самый широкий конструктор геймификации в Telegram: колесо фортуны, кейсы, гивы и новый стрик-квиз. Привлекайте и удерживайте аудиторию, публикуйте посты сразу в каналы, смотрите аналитику — запуск за пару минут." />
+  <meta property="og:title" content="Spinly — конструктор геймификации для Telegram" />
+  <meta property="og:description" content="Колесо фортуны, кейсы, гивы и новый стрик-квиз в одном приложении. Привлечение, удержание и аналитика — прямо в Telegram." />
   <meta property="og:image" content="assets/logo.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preload" as="image" href="assets/shots/wheel-coffee.png" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -53,25 +54,33 @@
   <section class="hero">
     <div class="container hero__grid">
       <div>
-        <h1>Розыгрыши, которые <span class="accent">растят канал</span> и возвращают аудиторию — прямо в Telegram</h1>
-        <p class="lead">Гив, колесо фортуны, кейсы, мульти-гив — любой формат под вашу задачу. Привлечь новых крупным призом или удержать постоянных моментальным розыгрышем — и всё это внутри Telegram, с аналитикой и запуском за пару минут.</p>
+        <h1>Самый широкий <span class="accent">конструктор геймификации</span> — прямо в Telegram</h1>
+        <p class="lead">Колесо фортуны, кейсы, гивы и новый <span class="hl">стрик-квиз</span> — всё в одном приложении. Один инструмент, чтобы привести новых подписчиков крупным призом и вернуть постоянных мгновенной игрой. Без сторонних сайтов и без кода — первый запуск за пару минут.</p>
         <div class="actions">
           <a class="btn btn-lg" href="https://t.me/spinlyrollbot/app?startapp=campaigns" target="_blank" rel="noopener">Запустить розыгрыш</a>
           <a class="btn btn-ghost btn-lg" href="#how">Как это работает</a>
         </div>
         <ul class="hero__chips">
-          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Возврат аудитории</li>
-          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Рост подписчиков</li>
-          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Аналитика</li>
-          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Запуск за 2 минуты</li>
+          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Привлечение и удержание</li>
+          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Стрик-квиз — новинка</li>
+          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Публикация в каналы</li>
+          <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Аналитика по каналам</li>
         </ul>
       </div>
       <div class="hero__media">
         <div class="hero__fan">
-          <img class="hero__fan-card hero__fan-card--left" src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Гив: розыгрыш призов и список победителей" loading="eager" />
-          <img class="hero__fan-card hero__fan-card--center" src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо фортуны: мгновенный приз" loading="eager" />
-          <img class="hero__fan-card hero__fan-card--right" src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы: азартное открытие приза" loading="eager" />
+          <img class="hero__fan-card hero__fan-card--left" src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Гив: розыгрыш призов и список победителей" loading="eager" decoding="async" />
+          <img class="hero__fan-card hero__fan-card--center" src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо фортуны: мгновенный приз" loading="eager" fetchpriority="high" decoding="async" />
+          <img class="hero__fan-card hero__fan-card--right" src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы: азартное открытие приза" loading="eager" decoding="async" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pitch">
+    <div class="container">
+      <div class="pitch__inner">
+        <p>Не просто бот для гивов. Spinly — <span class="hl">полноценный конструктор геймификации</span>: собираете под свою задачу что угодно — от мгновенного колеса до многодневного квиза, — и всё это живёт внутри Telegram.</p>
       </div>
     </div>
   </section>
@@ -80,24 +89,24 @@
     <div class="container">
       <div class="section__head">
         <h2>Под каждую задачу — свой формат</h2>
-        <p class="lead">Хаос в комментариях, команды-боты, один всплеск и ноль цифр. В Spinly розыгрыш — приложение: гив привлекает крупным призом и соавторством, колесо и кейсы возвращают за новым спином. Не один формат вместо другого — нужный под вашу цель. Часто их и комбинируют.</p>
+        <p class="lead">Разным целям нужны разные механики. Привести людей крупным призом — одно. Вернуть их завтра и послезавтра — совсем другое. В Spinly есть и то, и другое, и их легко комбинировать.</p>
       </div>
       <ul class="why-list">
         <li>
           <strong>Крупный приз и охват</strong>
-          Гив и мульти-гив — привычный людям формат. Легко участвовать, удобно звать партнёров и расти за счёт подписки.
+          Гив с таймером — привычный людям формат. Легко участвовать, удобно звать партнёров и расти за счёт подписки.
         </li>
         <li>
           <strong>Моментальный результат</strong>
-          Колесо и кейсы — участник крутит и сразу видит приз. Не «подождите неделю».
+          Колесо и кейсы — участник крутит и сразу видит приз. Никакого «ждите неделю».
         </li>
         <li>
-          <strong>Канал растёт сам</strong>
-          Условие подписки, соавторство и рефералы приводят людей, а не только раздают призы.
+          <strong>Возвращаются каждый день</strong>
+          Стрик-квиз: ежедневные вопросы и растущая серия. Люди заходят в канал снова и снова.
         </li>
         <li>
           <strong>Видно, что окупилось</strong>
-          Воронка, «приведено по каналам», рефералы — не список победителей в таблице.
+          Воронка, «кто сколько привёл», рефералы — а не просто список победителей в таблице.
         </li>
       </ul>
     </div>
@@ -108,38 +117,64 @@
       <div class="section__head">
         <span class="badge">Это про вас</span>
         <h2>Четыре сценария — узнайте свой</h2>
-        <p class="lead">Одна механика не для всех. Выберите формат под задачу: вернуть аудиторию, привести подписчика, удержать её неделю за неделей.</p>
+        <p class="lead">Одна механика подходит не всем. Выберите формат под свою задачу: вернуть аудиторию, привести подписчика или удерживать её день за днём.</p>
       </div>
       <div class="scenario-grid">
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни" loading="lazy" />
+            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни" loading="lazy" decoding="async" />
           </figure>
           <h3>Кофейня</h3>
           <p>Колесо со скидками и десертами. Гость уходит с поводом вернуться — и крутит снова при следующем визите.</p>
         </article>
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" />
+            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" decoding="async" />
           </figure>
           <h3>Барбершоп</h3>
           <p>Кейсы со стрижкой и укладкой, приз от спонсора. Со-маркетинг с соседним брендом без отдельной кампании.</p>
         </article>
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Итоги гива с победителями" loading="lazy" />
+            <img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Итоги гива с победителями" loading="lazy" decoding="async" />
           </figure>
           <h3>Блогер</h3>
           <p>Гив с крупным призом и соавторством. Охват двух каналов, подписка как условие, понятные итоги для аудитории.</p>
         </article>
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/user-multi.png" width="780" height="1688" alt="Мульти-гив с еженедельным тиражом" loading="lazy" />
+            <img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Стрик-квиз: ежедневная серия" loading="lazy" decoding="async" />
           </figure>
-          <h3>Бренд</h3>
-          <p>Мульти-гив: каждую неделю новый победитель. Один розыгрыш — несколько поводов зайти и не отписаться.</p>
+          <h3>Эксперт <span class="pill-new">Новинка</span></h3>
+          <p>Стрик-квиз перед запуском курса: вопросы по дням, серия и бонус. Аудитория возвращается каждый день сама.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="streak">
+    <div class="container">
+      <article class="feature feature--wide">
+        <div class="feature__text">
+          <span class="badge">Флагман · <span style="color:#fff">новинка</span></span>
+          <h2>Стрик-квиз — люди возвращаются <span class="hl">каждый день</span></h2>
+          <p>Обычный розыгрыш даёт один всплеск и тишину. Стрик-квиз растягивает вовлечённость на дни: каждый день — новый вопрос, за ответ растёт серия, а за серию — бонус к баллам. Механика как в Duolingo, только про ваш канал.</p>
+          <p>Пропустили день — заморозка его простит. А живой топ участников заставляет подниматься выше. Это удержание без единого рекламного рубля.</p>
+          <aside class="example">
+            <span class="example__label">Зачем это вам</span>
+            <p>Подписчику есть смысл заходить в канал каждый день, а вам — не терять аудиторию в паузах между розыгрышами. <a href="streak.html" style="font-weight:700">Как работает стрик-квиз →</a></p>
+          </aside>
+        </div>
+        <div class="feature__media" style="flex-direction:column;gap:22px;align-items:center">
+          <div class="streak-strip">
+            <div class="streak-day"><div class="streak-dot streak-dot--done">+11</div><small>День 1</small><span class="streak-bonus">🔥</span></div>
+            <div class="streak-day"><div class="streak-dot streak-dot--done">+12</div><small>День 2</small><span class="streak-bonus">+1 🔥</span></div>
+            <div class="streak-day"><div class="streak-dot streak-dot--done">+13</div><small>День 3</small><span class="streak-bonus">+3 🔥</span></div>
+            <div class="streak-day"><div class="streak-dot streak-dot--today">4</div><small>Сегодня</small><span class="streak-bonus">&nbsp;</span></div>
+            <div class="streak-day"><div class="streak-dot">5</div><small>Завтра</small><span class="streak-bonus">&nbsp;</span></div>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -148,23 +183,23 @@
       <article class="feature feature--wide">
         <div class="feature__text">
           <span class="badge">Удержание</span>
-          <h2>Возвращаются — за спином, за новым тиражом, по напоминанию</h2>
-          <p>Моментальный розыгрыш — один из рычагов: колесо или кейсы, результат сразу, бонусные попытки и «ещё раз». Удерживают и регулярные форматы: мульти-гив «каждую неделю новый победитель», серия розыгрышей — повод не отписываться.</p>
-          <p>Telegram сам напоминает участникам: доступна новая попытка, стартовал тираж мульти-гива, объявлены результаты. Пуш-уведомления возвращают людей в розыгрыш — без затрат на рекламу.</p>
+          <h2>Пуш-уведомления возвращают людей — <span class="hl">бесплатно</span></h2>
+          <p>Главный рычаг удержания — встроенные пуши Telegram. Spinly сам пингует участников в нужный момент: доступна новая попытка, пора продлить серию в квизе, стартовал новый тираж, объявлены результаты. Человек получает уведомление и возвращается в игру — без затрат на рекламу и повторные посевы.</p>
+          <p>А дальше работают сами механики: бонусные попытки и «ещё раз» в колесе, ежедневная серия в стрик-квизе. Повод вернуться есть всегда.</p>
           <aside class="example">
             <span class="example__label">Пример</span>
-            <p>Кофейня раздаёт скидки и десерты через колесо. Гость крутит после визита, приходит ещё раз за новым спином — и за новым заказом. Канал параллельно ведёт мульти-гив: каждую неделю новый победитель.</p>
+            <p>Гость кофейни крутит колесо после визита. На следующий день приходит <span class="hl">пуш «доступна новая попытка»</span> — он снова открывает приложение и заходит за новым заказом.</p>
           </aside>
         </div>
         <div class="feature__media value-media">
           <figure class="phone">
-            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни со скидками и десертами" loading="lazy" />
+            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни со скидками" loading="lazy" decoding="async" />
           </figure>
           <figure class="phone">
-            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа: стрижка, укладка, скидка" loading="lazy" />
+            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" decoding="async" />
           </figure>
           <figure class="phone">
-            <img src="assets/shots/user-multi.png" width="780" height="1688" alt="Мульти-гив: каждую неделю новый победитель" loading="lazy" />
+            <img src="assets/shots/wheel-themes.png" width="780" height="1688" alt="Настройки уведомлений участникам" loading="lazy" decoding="async" />
           </figure>
         </div>
       </article>
@@ -177,7 +212,8 @@
         <div class="feature__text">
           <span class="badge">Рост канала</span>
           <h2>Подписка, соавторство и рефералы — аудитория приходит сама</h2>
-          <p>Условие подписки включается, когда привязан канал. Соавторство — обмен аудиторией с партнёром. Рефералы — участники зовут друзей за попытками. Три рычага роста в одном розыгрыше.</p>
+          <p>Условие подписки включается, когда привязан канал. Рефералы — участники зовут друзей за дополнительные попытки. А соавторство — это обмен аудиторией с партнёром: оба канала растут с одного розыгрыша.</p>
+          <p>Главное — соавтора не нужно искать по переписке и настраивать вручную. <span class="hl">Приглашение отправляется прямо в приложении</span>: кидаете партнёру ссылку-инвайт, он принимает в пару кликов — и розыгрыш уже общий. Там же видно, кто принял, и какими правами он пользуется.</p>
           <aside class="example">
             <span class="example__label">Пример</span>
             <p>Блогер и партнёр проводят гив вдвоём. Каждый приводит своих — оба канала растут, а в статистике видно, кто сколько привёл.</p>
@@ -185,14 +221,14 @@
         </div>
         <div class="feature__media value-media">
           <figure class="phone">
-            <img src="assets/shots/coauthors-pick.png" width="780" height="1688" alt="Мои соавторства: совместные розыгрыши с другими каналами" loading="lazy" />
+            <img src="assets/shots/coauthors-pick.png" width="780" height="1688" alt="Приглашение соавтора прямо в приложении" loading="lazy" decoding="async" />
           </figure>
-          <figure class="phone" data-slot="stats-channels-img">
-            <img src="assets/shots/coauthorship-invites.png" width="780" height="1688" alt="Сколько участников привёл каждый канал" loading="lazy" />
+          <figure class="phone">
+            <img src="assets/shots/coauthorship-invites.png" width="780" height="1688" alt="Сколько участников привёл каждый канал" loading="lazy" decoding="async" />
           </figure>
-          <figure class="phone" data-slot="stats-channels-img">
-            <img src="assets/shots/stats-channels.png" width="780" height="1688" alt="Сколько участников привёл каждый канал" loading="lazy" />
-          </figure>       
+          <figure class="phone">
+            <img src="assets/shots/stats-channels.png" width="780" height="1688" alt="Статистика по каналам-источникам" loading="lazy" decoding="async" />
+          </figure>
         </div>
       </article>
     </div>
@@ -204,17 +240,50 @@
         <div class="feature__text">
           <span class="badge">Аналитика и ROI</span>
           <h2>Понятно, какой канал и какая механика принесли аудиторию</h2>
-          <p>Не просто список победителей. Воронка, «приведено по каналам», рефералы, динамика по всем розыгрышам. Видно, что сработало — и куда не стоит тратить приз.</p>
+          <p>Не просто список победителей. Воронка <span class="hl">«зашёл → сыграл → выиграл → забрал»</span>, «приведено по каналам», рефералы, новые против вернувшихся, динамика по всем розыгрышам. Видно, что сработало — и куда не стоит тратить следующий приз.</p>
         </div>
         <div class="feature__media value-media">
           <figure class="phone">
-            <img src="assets/shots/stats-overview.png" width="780" height="1688" alt="Динамика участников и общие цифры по розыгрышам" loading="lazy" />
+            <img src="assets/shots/stats-overview.png" width="780" height="1688" alt="Динамика участников и общие цифры" loading="lazy" decoding="async" />
           </figure>
           <figure class="phone">
-            <img src="assets/shots/stats-referrals.png" width="780" height="1688" alt="Реферальная программа и воронка приглашений" loading="lazy" />
+            <img src="assets/shots/stats-referrals.png" width="780" height="1688" alt="Реферальная программа и воронка приглашений" loading="lazy" decoding="async" />
           </figure>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="publish">
+    <div class="container">
+      <div class="section__head">
+        <span class="badge">Конструктор постов</span>
+        <h2>Соберите пост с кнопкой и опубликуйте — <span class="hl">сразу в каналы</span></h2>
+        <p class="lead">Не нужно верстать пост вручную и вклеивать ссылки. Пересылаете боту готовый пост, вписываете текст кнопки — и выбираете, как его опубликовать. В каждую ссылку Spinly сам зашивает метку, чтобы потом видеть, какой канал привёл людей.</p>
+      </div>
+
+      <div class="pub-steps">
+        <span class="pub-steps__item"><b>1</b> Переслать боту пост</span>
+        <span class="pub-steps__arrow">→</span>
+        <span class="pub-steps__item"><b>2</b> Вписать текст кнопки</span>
+        <span class="pub-steps__arrow">→</span>
+        <span class="pub-steps__item"><b>3</b> Выбрать, куда публиковать</span>
+      </div>
+
+      <div class="pub-split">
+        <article class="pub-card">
+          <span class="pub-card__tag">Сразу в каналы</span>
+          <h3>Опубликовать в один клик</h3>
+          <p>Выбираете каналы — бот <span class="hl">сам публикует пост сразу во все</span>. Удобно, когда каналов несколько: не нужно постить в каждый руками.</p>
+          <p>В ссылку каждого поста автоматически зашивается ID своего канала — в статистике сразу видно, откуда пришёл каждый участник.</p>
+        </article>
+        <article class="pub-card">
+          <span class="pub-card__tag">Себе в личку</span>
+          <h3>Для ручной и отложенной публикации</h3>
+          <p>Бот присылает готовый пост с кнопкой вам в личные сообщения — публикуете его сами где угодно и <span class="hl">когда угодно</span> (например, ставите на отложенный постинг).</p>
+          <p>Можно указать, для какого канала этот пост, — тогда переходы по кнопке зачтутся именно этому каналу. Без привязки ссылка будет общей.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -228,7 +297,7 @@
         </div>
         <div class="feature__media value-media">
           <figure class="phone">
-            <img src="assets/shots/antibot-settings.png" width="780" height="1688" alt="Настройки антибота: условия отсева подозрительных участников" loading="lazy" />
+            <img src="assets/shots/antibot-settings.png" width="780" height="1688" alt="Настройки антибота" loading="lazy" decoding="async" />
           </figure>
         </div>
       </article>
@@ -239,28 +308,28 @@
     <div class="container">
       <article class="feature feature--wide">
         <div class="feature__text">
-          <span class="badge">Контроль</span>
-          <h2>Полный интерфейс — не команды в чат с ботом</h2>
-          <p>Создаёте, публикуете и выдаёте призы в приложении. Команда канала работает с правами. Темы под бренд. Автоматизация выдачи — без таблиц и ручного разбора.</p>
+          <span class="badge">Контроль и команда</span>
+          <h2>Раздайте роли команде — <span class="hl">каждому свои права</span></h2>
+          <p>Крупный розыгрыш редко ведут в одиночку. В Spinly к нему можно подключить соавторов (другие каналы) и со-администраторов из своей команды — и для каждого гибко настроить, что ему можно.</p>
           <ul class="ticks ticks--light">
-            <li>Админка розыгрыша: участники, победители, публикация</li>
-            <li>Менеджеры каналов с правами на конкретный розыгрыш</li>
-            <li>Очередь выдачи и призы у участника в приложении</li>
-            <li>Темы колеса и кейсов под кофейню, салон, бренд</li>
+            <li><strong>Приглашение по ссылке</strong> — отправляете инвайт прямо в приложении, человек принимает в пару кликов</li>
+            <li><strong>Права под задачу</strong> — публикация, просмотр статистики, погашение призов, редактирование, запуск и пауза, приглашение других</li>
+            <li><strong>Роль «менеджер»</strong> для админов вашего канала — помогают вести розыгрыш, не трогая лишнего</li>
+            <li><strong>Всё видно и управляемо</strong> — кто подключён, какие у него права, и как их изменить</li>
           </ul>
         </div>
         <div class="feature__media value-media value-media--quad">
           <figure class="phone">
-            <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Админка колеса: счётчики, публикация, призы" loading="lazy" />
+            <img src="assets/shots/prizes-pending.png" width="780" height="1688" alt="Настройка админов и прав в розыгрыше" loading="lazy" decoding="async" />
           </figure>
           <figure class="phone">
-            <img src="assets/shots/admin-wheel.png" width="780" height="1688" alt="Админка мульти-гива: тираж, таймер, призовой фонд" loading="lazy" />
+            <img src="assets/shots/coauthors-pick.png" width="780" height="1688" alt="Приглашение соавторов" loading="lazy" decoding="async" />
           </figure>
           <figure class="phone">
-            <img src="assets/shots/prizes-pending.png" width="780" height="1688" alt="Настройка админов и прав в розыгрыше" loading="lazy" />
+            <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Админка розыгрыша" loading="lazy" decoding="async" />
           </figure>
           <figure class="phone">
-            <img src="assets/shots/wheel-themes.png" width="780" height="1688" alt="Настройки уведомлений участникам" loading="lazy" />
+            <img src="assets/shots/admin-wheel.png" width="780" height="1688" alt="Настройки розыгрыша" loading="lazy" decoding="async" />
           </figure>
         </div>
       </article>
@@ -272,12 +341,12 @@
       <div class="section__head">
         <span class="badge">Форматы</span>
         <h2>Инструмент под задачу — не каталог фич</h2>
-        <p class="lead">Четыре формата. Выгода разная, запуск один и тот же.</p>
+        <p class="lead">Четыре формата. Выгода у каждого своя, а запуск — одинаково простой.</p>
       </div>
       <div class="format-rows">
         <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Колесо фортуны" loading="lazy" />
+            <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Колесо фортуны" loading="lazy" decoding="async" />
           </figure>
           <div>
             <span class="format-card__badge">Моментальный</span>
@@ -287,7 +356,7 @@
         </article>
         <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы" loading="lazy" />
+            <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы" loading="lazy" decoding="async" />
           </figure>
           <div>
             <span class="format-card__badge">Моментальный</span>
@@ -297,7 +366,7 @@
         </article>
         <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Гив с таймером" loading="lazy" />
+            <img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Гив с таймером" loading="lazy" decoding="async" />
           </figure>
           <div>
             <span class="format-card__badge">По таймеру</span>
@@ -307,12 +376,12 @@
         </article>
         <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/admin-multi.png" width="780" height="1688" alt="Мульти-гив" loading="lazy" />
+            <img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Стрик-квиз: ежедневная серия вопросов" loading="lazy" decoding="async" />
           </figure>
           <div>
-            <span class="format-card__badge">Тиражами</span>
-            <h3>Мульти-гив</h3>
-            <p>Серия победителей по расписанию. Удержание: каждую неделю новый итог в том же розыгрыше.</p>
+            <span class="format-card__badge">Удержание · новинка</span>
+            <h3>Стрик-квиз</h3>
+            <p>Многодневный квиз с серией и бонусом. Люди возвращаются каждый день — удержание по механике Duolingo. <a href="streak.html" style="font-weight:700;white-space:nowrap">Подробнее →</a></p>
           </div>
         </article>
       </div>
@@ -322,43 +391,43 @@
         <p class="lead themes__lead">Колесо и кейсы в готовых стилях. Выбрали тему — гости видят ваш характер, а не «ещё один бот».</p>
         <div class="theme-gallery">
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Тема Coffee" loading="lazy" />
+            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Тема Coffee" loading="lazy" decoding="async" />
             <figcaption>Coffee</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-barber.png" width="780" height="1688" alt="Тема Barber" loading="lazy" />
+            <img src="assets/shots/wheel-barber.png" width="780" height="1688" alt="Тема Barber" loading="lazy" decoding="async" />
             <figcaption>Barber</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-elegant.png" width="780" height="1688" alt="Тема Elegant" loading="lazy" />
+            <img src="assets/shots/wheel-elegant.png" width="780" height="1688" alt="Тема Elegant" loading="lazy" decoding="async" />
             <figcaption>Elegant</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-fresh.png" width="780" height="1688" alt="Тема Fresh" loading="lazy" />
+            <img src="assets/shots/wheel-fresh.png" width="780" height="1688" alt="Тема Fresh" loading="lazy" decoding="async" />
             <figcaption>Fresh</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Тема Luxury" loading="lazy" />
+            <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Тема Luxury" loading="lazy" decoding="async" />
             <figcaption>Luxury</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-telegram.png" width="780" height="1688" alt="Классическая тема Telegram" loading="lazy" />
+            <img src="assets/shots/wheel-telegram.png" width="780" height="1688" alt="Классическая тема Telegram" loading="lazy" decoding="async" />
             <figcaption>Telegram</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы Barber" loading="lazy" />
+            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы Barber" loading="lazy" decoding="async" />
             <figcaption>Кейсы · Barber</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/cases-fitness.png" width="780" height="1688" alt="Кейсы Fitness" loading="lazy" />
+            <img src="assets/shots/cases-fitness.png" width="780" height="1688" alt="Кейсы Fitness" loading="lazy" decoding="async" />
             <figcaption>Кейсы · Fitness</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы Luxury" loading="lazy" />
+            <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы Luxury" loading="lazy" decoding="async" />
             <figcaption>Кейсы · Luxury</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Кейсы Telegram" loading="lazy" />
+            <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Кейсы Telegram" loading="lazy" decoding="async" />
             <figcaption>Кейсы · Telegram</figcaption>
           </figure>
         </div>
@@ -377,34 +446,34 @@
         <article class="step">
           <span class="step__num">1</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/profile-channels.png" width="780" height="1688" alt="Мои каналы: подключение канала к боту" loading="lazy" />
+            <img src="assets/shots/profile-channels.png" width="780" height="1688" alt="Мои каналы: подключение канала к боту" loading="lazy" decoding="async" />
           </figure>
           <h3>Привяжите свой канал</h3>
-          <p>Профиль -> Мои каналы. Дальше он доступен для любых розыгрышей.</p>
+          <p>Профиль → Мои каналы. Дальше он доступен для любых розыгрышей.</p>
         </article>
         <article class="step">
           <span class="step__num">2</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/create-giveaway-basics.png" width="780" height="1688" alt="Выбор типа розыгрыша и основная информация" loading="lazy" />
+            <img src="assets/shots/create-giveaway-basics.png" width="780" height="1688" alt="Выбор типа розыгрыша" loading="lazy" decoding="async" />
           </figure>
           <h3>Выберите тип и заполните</h3>
-          <p>Гив, колесо, кейсы или мульти-гив. Добавьте призы и основную информацию — пара минут.</p>
+          <p>Колесо, кейсы, гив или стрик-квиз. Добавьте призы и основную информацию — пара минут.</p>
         </article>
         <article class="step">
           <span class="step__num">3</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/channel-add.png" width="780" height="1688" alt="Канал как условие участия" loading="lazy" />
+            <img src="assets/shots/channel-add.png" width="780" height="1688" alt="Канал как условие участия" loading="lazy" decoding="async" />
           </figure>
           <h3>Сделайте канал условием</h3>
-          <p>Привяжите канал к розыгрышу — подписка на него станет условием для участия.</p>
+          <p>Привяжите канал к розыгрышу — подписка на него станет условием участия.</p>
         </article>
         <article class="step">
           <span class="step__num">4</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/start-button.png" width="780" height="1688" alt="Запуск розыгрыша" loading="lazy" />
+            <img src="assets/shots/start-button.png" width="780" height="1688" alt="Запуск розыгрыша" loading="lazy" decoding="async" />
           </figure>
-          <h3>Запустите розыгрыш</h3>
-          <p>Нажмите «Запустить розыгрыш» — и он готов принимать участников.</p>
+          <h3>Опубликуйте и запустите</h3>
+          <p>Соберите пост с кнопкой и опубликуйте сразу в каналы — розыгрыш готов принимать участников.</p>
         </article>
       </div>
     </div>
