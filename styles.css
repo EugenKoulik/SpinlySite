@@ -254,6 +254,10 @@ a:hover { color: var(--brand-orange-600); }
   box-shadow: none;
   cursor: zoom-in;
 }
+.phone picture {
+  display: block;
+  width: 100%;
+}
 .phone img {
   width: 100%;
   height: auto;
@@ -806,6 +810,16 @@ a:hover { color: var(--brand-orange-600); }
   transform: rotate(9deg) translateX(-28px);
   margin-left: -70px;
 }
+.hero__fan > picture.hero__fan-card > img.hero__fan-card {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  transform: none;
+  box-shadow: none;
+  position: static;
+  border-radius: inherit;
+  display: block;
+}
 
 .why-list {
   list-style: none;
@@ -965,6 +979,10 @@ a:hover { color: var(--brand-orange-600); }
 .theme-tile {
   margin: 0;
   cursor: zoom-in;
+}
+.theme-tile picture {
+  display: block;
+  width: 100%;
 }
 .theme-tile img {
   width: 100%;

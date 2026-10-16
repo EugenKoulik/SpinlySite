@@ -10,7 +10,7 @@
   <meta property="og:image" content="assets/logo.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
-  <link rel="preload" as="image" href="assets/shots/wheel-coffee.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/shots/wheel-coffee-840.webp" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -69,9 +69,24 @@
       </div>
       <div class="hero__media">
         <div class="hero__fan">
-          <img class="hero__fan-card hero__fan-card--left" src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Гив: розыгрыш призов и список победителей" loading="eager" decoding="async" />
-          <img class="hero__fan-card hero__fan-card--center" src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо фортуны: мгновенный приз" loading="eager" fetchpriority="high" decoding="async" />
-          <img class="hero__fan-card hero__fan-card--right" src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы: азартное открытие приза" loading="eager" decoding="async" />
+          <picture class="hero__fan-card hero__fan-card--left">
+            <source type="image/webp"
+                    srcset="assets/shots/giveaway-results-420.webp 420w, assets/shots/giveaway-results-840.webp 840w"
+                    sizes="(max-width: 640px) 168px, 236px" />
+            <img class="hero__fan-card hero__fan-card--left" src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Гив: розыгрыш призов и список победителей" loading="eager" decoding="async" />
+          </picture>
+          <picture class="hero__fan-card hero__fan-card--center">
+            <source type="image/webp"
+                    srcset="assets/shots/wheel-coffee-420.webp 420w, assets/shots/wheel-coffee-840.webp 840w"
+                    sizes="(max-width: 640px) 168px, 236px" />
+            <img class="hero__fan-card hero__fan-card--center" src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо фортуны: мгновенный приз" loading="eager" fetchpriority="high" decoding="async" />
+          </picture>
+          <picture class="hero__fan-card hero__fan-card--right">
+            <source type="image/webp"
+                    srcset="assets/shots/cases-barber-420.webp 420w, assets/shots/cases-barber-840.webp 840w"
+                    sizes="(max-width: 640px) 168px, 236px" />
+            <img class="hero__fan-card hero__fan-card--right" src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы: азартное открытие приза" loading="eager" decoding="async" />
+          </picture>
         </div>
       </div>
     </div>
@@ -122,28 +137,48 @@
       <div class="scenario-grid">
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-coffee-420.webp 420w, assets/shots/wheel-coffee-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 210px" />
+              <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <h3>Кофейня</h3>
           <p>Колесо со скидками и десертами. Гость уходит с поводом вернуться — и крутит снова при следующем визите.</p>
         </article>
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/cases-barber-420.webp 420w, assets/shots/cases-barber-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 210px" />
+              <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <h3>Барбершоп</h3>
           <p>Кейсы со стрижкой и укладкой, приз от спонсора. Со-маркетинг с соседним брендом без отдельной кампании.</p>
         </article>
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Итоги гива с победителями" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/giveaway-results-420.webp 420w, assets/shots/giveaway-results-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 210px" />
+              <img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Итоги гива с победителями" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <h3>Блогер</h3>
           <p>Гив с крупным призом и соавторством. Охват двух каналов, подписка как условие, понятные итоги для аудитории.</p>
         </article>
         <article class="scenario-card">
           <figure class="phone phone--sm">
-            <img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Стрик-квиз: ежедневная серия" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/giveaway-user-420.webp 420w, assets/shots/giveaway-user-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 210px" />
+              <img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Стрик-квиз: ежедневная серия" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <h3>Эксперт <span class="pill-new">Новинка</span></h3>
           <p>Стрик-квиз перед запуском курса: вопросы по дням, серия и бонус. Аудитория возвращается каждый день сама.</p>
@@ -193,13 +228,28 @@
         </div>
         <div class="feature__media value-media">
           <figure class="phone">
-            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни со скидками" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-coffee-420.webp 420w, assets/shots/wheel-coffee-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни со скидками" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="phone">
-            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/cases-barber-420.webp 420w, assets/shots/cases-barber-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="phone">
-            <img src="assets/shots/wheel-themes.png" width="780" height="1688" alt="Настройки уведомлений участникам" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-themes-420.webp 420w, assets/shots/wheel-themes-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/wheel-themes.png" width="780" height="1688" alt="Настройки уведомлений участникам" loading="lazy" decoding="async" />
+            </picture>
           </figure>
         </div>
       </article>
@@ -221,13 +271,28 @@
         </div>
         <div class="feature__media value-media">
           <figure class="phone">
-            <img src="assets/shots/coauthors-pick.png" width="780" height="1688" alt="Приглашение соавтора прямо в приложении" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/coauthors-pick-420.webp 420w, assets/shots/coauthors-pick-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/coauthors-pick.png" width="780" height="1688" alt="Приглашение соавтора прямо в приложении" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="phone">
-            <img src="assets/shots/coauthorship-invites.png" width="780" height="1688" alt="Сколько участников привёл каждый канал" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/coauthorship-invites-420.webp 420w, assets/shots/coauthorship-invites-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/coauthorship-invites.png" width="780" height="1688" alt="Сколько участников привёл каждый канал" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="phone">
-            <img src="assets/shots/stats-channels.png" width="780" height="1688" alt="Статистика по каналам-источникам" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/stats-channels-420.webp 420w, assets/shots/stats-channels-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/stats-channels.png" width="780" height="1688" alt="Статистика по каналам-источникам" loading="lazy" decoding="async" />
+            </picture>
           </figure>
         </div>
       </article>
@@ -244,10 +309,20 @@
         </div>
         <div class="feature__media value-media">
           <figure class="phone">
-            <img src="assets/shots/stats-overview.png" width="780" height="1688" alt="Динамика участников и общие цифры" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/stats-overview-420.webp 420w, assets/shots/stats-overview-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/stats-overview.png" width="780" height="1688" alt="Динамика участников и общие цифры" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="phone">
-            <img src="assets/shots/stats-referrals.png" width="780" height="1688" alt="Реферальная программа и воронка приглашений" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/stats-referrals-420.webp 420w, assets/shots/stats-referrals-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/stats-referrals.png" width="780" height="1688" alt="Реферальная программа и воронка приглашений" loading="lazy" decoding="async" />
+            </picture>
           </figure>
         </div>
       </article>
@@ -297,7 +372,12 @@
         </div>
         <div class="feature__media value-media">
           <figure class="phone">
-            <img src="assets/shots/antibot-settings.png" width="780" height="1688" alt="Настройки антибота" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/antibot-settings-420.webp 420w, assets/shots/antibot-settings-840.webp 840w"
+                      sizes="(max-width: 960px) 70vw, 230px" />
+              <img src="assets/shots/antibot-settings.png" width="780" height="1688" alt="Настройки антибота" loading="lazy" decoding="async" />
+            </picture>
           </figure>
         </div>
       </article>
@@ -320,16 +400,36 @@
         </div>
         <div class="feature__media value-media value-media--quad">
           <figure class="phone">
-            <img src="assets/shots/prizes-pending.png" width="780" height="1688" alt="Настройка админов и прав в розыгрыше" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/prizes-pending-420.webp 420w, assets/shots/prizes-pending-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 230px" />
+              <img src="assets/shots/prizes-pending.png" width="780" height="1688" alt="Настройка админов и прав в розыгрыше" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="phone">
-            <img src="assets/shots/coauthors-pick.png" width="780" height="1688" alt="Приглашение соавторов" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/coauthors-pick-420.webp 420w, assets/shots/coauthors-pick-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 230px" />
+              <img src="assets/shots/coauthors-pick.png" width="780" height="1688" alt="Приглашение соавторов" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="phone">
-            <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Админка розыгрыша" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/cases-telegram-420.webp 420w, assets/shots/cases-telegram-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 230px" />
+              <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Админка розыгрыша" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="phone">
-            <img src="assets/shots/admin-wheel.png" width="780" height="1688" alt="Настройки розыгрыша" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/admin-wheel-420.webp 420w, assets/shots/admin-wheel-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 230px" />
+              <img src="assets/shots/admin-wheel.png" width="780" height="1688" alt="Настройки розыгрыша" loading="lazy" decoding="async" />
+            </picture>
           </figure>
         </div>
       </article>
@@ -346,7 +446,12 @@
       <div class="format-rows">
         <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Колесо фортуны" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-luxury-420.webp 420w, assets/shots/wheel-luxury-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 220px" />
+              <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Колесо фортуны" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <div>
             <span class="format-card__badge">Моментальный</span>
@@ -356,7 +461,12 @@
         </article>
         <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/cases-luxury-420.webp 420w, assets/shots/cases-luxury-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 220px" />
+              <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <div>
             <span class="format-card__badge">Моментальный</span>
@@ -366,7 +476,12 @@
         </article>
         <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Гив с таймером" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/giveaway-user-420.webp 420w, assets/shots/giveaway-user-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 220px" />
+              <img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Гив с таймером" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <div>
             <span class="format-card__badge">По таймеру</span>
@@ -376,7 +491,12 @@
         </article>
         <article class="format-row">
           <figure class="phone phone--sm">
-            <img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Стрик-квиз: ежедневная серия вопросов" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/giveaway-results-420.webp 420w, assets/shots/giveaway-results-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 220px" />
+              <img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Стрик-квиз: ежедневная серия вопросов" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <div>
             <span class="format-card__badge">Удержание · новинка</span>
@@ -391,43 +511,93 @@
         <p class="lead themes__lead">Колесо и кейсы в готовых стилях. Выбрали тему — гости видят ваш характер, а не «ещё один бот».</p>
         <div class="theme-gallery">
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Тема Coffee" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-coffee-420.webp 420w, assets/shots/wheel-coffee-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Тема Coffee" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Coffee</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-barber.png" width="780" height="1688" alt="Тема Barber" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-barber-420.webp 420w, assets/shots/wheel-barber-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/wheel-barber.png" width="780" height="1688" alt="Тема Barber" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Barber</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-elegant.png" width="780" height="1688" alt="Тема Elegant" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-elegant-420.webp 420w, assets/shots/wheel-elegant-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/wheel-elegant.png" width="780" height="1688" alt="Тема Elegant" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Elegant</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-fresh.png" width="780" height="1688" alt="Тема Fresh" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-fresh-420.webp 420w, assets/shots/wheel-fresh-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/wheel-fresh.png" width="780" height="1688" alt="Тема Fresh" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Fresh</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Тема Luxury" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-luxury-420.webp 420w, assets/shots/wheel-luxury-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/wheel-luxury.png" width="780" height="1688" alt="Тема Luxury" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Luxury</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/wheel-telegram.png" width="780" height="1688" alt="Классическая тема Telegram" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/wheel-telegram-420.webp 420w, assets/shots/wheel-telegram-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/wheel-telegram.png" width="780" height="1688" alt="Классическая тема Telegram" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Telegram</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы Barber" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/cases-barber-420.webp 420w, assets/shots/cases-barber-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы Barber" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Кейсы · Barber</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/cases-fitness.png" width="780" height="1688" alt="Кейсы Fitness" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/cases-fitness-420.webp 420w, assets/shots/cases-fitness-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/cases-fitness.png" width="780" height="1688" alt="Кейсы Fitness" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Кейсы · Fitness</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы Luxury" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/cases-luxury-420.webp 420w, assets/shots/cases-luxury-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/cases-luxury.png" width="780" height="1688" alt="Кейсы Luxury" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Кейсы · Luxury</figcaption>
           </figure>
           <figure class="theme-tile">
-            <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Кейсы Telegram" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/cases-telegram-420.webp 420w, assets/shots/cases-telegram-840.webp 840w"
+                      sizes="(max-width: 960px) 46vw, 180px" />
+              <img src="assets/shots/cases-telegram.png" width="780" height="1688" alt="Кейсы Telegram" loading="lazy" decoding="async" />
+            </picture>
             <figcaption>Кейсы · Telegram</figcaption>
           </figure>
         </div>
@@ -446,7 +616,12 @@
         <article class="step">
           <span class="step__num">1</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/profile-channels.png" width="780" height="1688" alt="Мои каналы: подключение канала к боту" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/profile-channels-420.webp 420w, assets/shots/profile-channels-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 220px" />
+              <img src="assets/shots/profile-channels.png" width="780" height="1688" alt="Мои каналы: подключение канала к боту" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <h3>Привяжите свой канал</h3>
           <p>Профиль → Мои каналы. Дальше он доступен для любых розыгрышей.</p>
@@ -454,7 +629,12 @@
         <article class="step">
           <span class="step__num">2</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/create-giveaway-basics.png" width="780" height="1688" alt="Выбор типа розыгрыша" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/create-giveaway-basics-420.webp 420w, assets/shots/create-giveaway-basics-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 220px" />
+              <img src="assets/shots/create-giveaway-basics.png" width="780" height="1688" alt="Выбор типа розыгрыша" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <h3>Выберите тип и заполните</h3>
           <p>Колесо, кейсы, гив или стрик-квиз. Добавьте призы и основную информацию — пара минут.</p>
@@ -462,7 +642,12 @@
         <article class="step">
           <span class="step__num">3</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/channel-add.png" width="780" height="1688" alt="Канал как условие участия" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/channel-add-420.webp 420w, assets/shots/channel-add-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 220px" />
+              <img src="assets/shots/channel-add.png" width="780" height="1688" alt="Канал как условие участия" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <h3>Сделайте канал условием</h3>
           <p>Привяжите канал к розыгрышу — подписка на него станет условием участия.</p>
@@ -470,7 +655,12 @@
         <article class="step">
           <span class="step__num">4</span>
           <figure class="phone phone--sm">
-            <img src="assets/shots/start-button.png" width="780" height="1688" alt="Запуск розыгрыша" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/shots/start-button-420.webp 420w, assets/shots/start-button-840.webp 840w"
+                      sizes="(max-width: 720px) 62vw, 220px" />
+              <img src="assets/shots/start-button.png" width="780" height="1688" alt="Запуск розыгрыша" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <h3>Опубликуйте и запустите</h3>
           <p>Соберите пост с кнопкой и опубликуйте сразу в каналы — розыгрыш готов принимать участников.</p>

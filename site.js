@@ -32,7 +32,7 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeLb();
   });
-  document.querySelectorAll(".phone img, .theme-tile img, .hero__fan-card").forEach((img) => {
+  document.querySelectorAll(".phone img, .theme-tile img, .hero__fan img").forEach((img) => {
     img.addEventListener("click", (e) => {
       e.stopPropagation();
       lbImg.src = img.currentSrc || img.src;
