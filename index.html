@@ -56,10 +56,10 @@
     <div class="container hero__grid">
       <div>
         <h1>Самый широкий <span class="accent">конструктор геймификации</span> — прямо в Telegram</h1>
-        <p class="lead">Колесо фортуны, кейсы, гивы и новый <span class="hl">стрик-квиз</span> — всё в одном приложении. Один инструмент, чтобы привести новых подписчиков крупным призом и вернуть постоянных мгновенной игрой. Без сторонних сайтов и без кода — первый запуск за пару минут.</p>
+        <p class="lead">Для каналов, блогеров и бизнеса в Telegram. Колесо фортуны, кейсы, гивы и новый <span class="hl">стрик-квиз</span> — в одном приложении: приводите новых подписчиков крупным призом и возвращайте постоянных мгновенной игрой. Без сторонних сайтов и без кода — первый запуск за пару минут.</p>
         <div class="actions">
           <a class="btn btn-lg" href="https://t.me/spinlyrollbot/app?startapp=campaigns" target="_blank" rel="noopener">Запустить розыгрыш</a>
-          <a class="btn btn-ghost btn-lg" href="#how">Как это работает</a>
+          <a class="btn btn-ghost btn-lg" href="#video">Посмотреть демо</a>
         </div>
         <ul class="hero__chips">
           <li class="chip"><span class="chip__dot" aria-hidden="true"></span>Привлечение и удержание</li>
@@ -69,25 +69,43 @@
         </ul>
       </div>
       <div class="hero__media">
-        <div class="hero__fan">
-          <picture class="hero__fan-card hero__fan-card--left">
-            <source type="image/webp"
-                    srcset="assets/shots/giveaway-results-420.webp 420w, assets/shots/giveaway-results-840.webp 840w"
-                    sizes="(max-width: 640px) 168px, 236px" />
-            <img class="hero__fan-card hero__fan-card--left" src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Гив: розыгрыш призов и список победителей" loading="eager" decoding="async" />
-          </picture>
-          <picture class="hero__fan-card hero__fan-card--center">
-            <source type="image/webp"
-                    srcset="assets/shots/wheel-coffee-420.webp 420w, assets/shots/wheel-coffee-840.webp 840w"
-                    sizes="(max-width: 640px) 168px, 236px" />
-            <img class="hero__fan-card hero__fan-card--center" src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо фортуны: мгновенный приз" loading="eager" fetchpriority="high" decoding="async" />
-          </picture>
-          <picture class="hero__fan-card hero__fan-card--right">
-            <source type="image/webp"
-                    srcset="assets/shots/cases-barber-420.webp 420w, assets/shots/cases-barber-840.webp 840w"
-                    sizes="(max-width: 640px) 168px, 236px" />
-            <img class="hero__fan-card hero__fan-card--right" src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы: азартное открытие приза" loading="eager" decoding="async" />
-          </picture>
+        <!-- Барабан кейсов: кликабельные карточки ведут в раздел сценариев -->
+        <div class="barrel" aria-label="Примеры розыгрышей по нишам">
+          <div class="barrel__track">
+            <a class="barrel__card" href="#scenarios">
+              <span class="barrel__thumb"><img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="Колесо кофейни" loading="eager" decoding="async" /></span>
+              <span class="barrel__meta"><span class="barrel__tag">Колесо</span><span class="barrel__niche">Кофейня</span><span class="barrel__desc">Скидки и десерты — гость возвращается за новым спином</span></span>
+            </a>
+            <a class="barrel__card" href="#scenarios">
+              <span class="barrel__thumb"><img src="assets/shots/cases-barber.png" width="780" height="1688" alt="Кейсы барбершопа" loading="lazy" decoding="async" /></span>
+              <span class="barrel__meta"><span class="barrel__tag">Кейсы</span><span class="barrel__niche">Барбершоп</span><span class="barrel__desc">Стрижка, укладка и приз от спонсора</span></span>
+            </a>
+            <a class="barrel__card" href="#scenarios">
+              <span class="barrel__thumb"><img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="Гив блогера" loading="lazy" decoding="async" /></span>
+              <span class="barrel__meta"><span class="barrel__tag">Гив</span><span class="barrel__niche">Блогер</span><span class="barrel__desc">Крупный приз и соавторство — растут два канала</span></span>
+            </a>
+            <a class="barrel__card" href="#scenarios">
+              <span class="barrel__thumb"><img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="Стрик-квиз эксперта" loading="lazy" decoding="async" /></span>
+              <span class="barrel__meta"><span class="barrel__tag">Стрик-квиз</span><span class="barrel__niche">Эксперт</span><span class="barrel__desc">Ежедневные вопросы — аудитория возвращается сама</span></span>
+            </a>
+            <!-- дубль для бесшовной прокрутки -->
+            <a class="barrel__card" href="#scenarios" aria-hidden="true" tabindex="-1">
+              <span class="barrel__thumb"><img src="assets/shots/wheel-coffee.png" width="780" height="1688" alt="" loading="lazy" decoding="async" /></span>
+              <span class="barrel__meta"><span class="barrel__tag">Колесо</span><span class="barrel__niche">Кофейня</span><span class="barrel__desc">Скидки и десерты — гость возвращается за новым спином</span></span>
+            </a>
+            <a class="barrel__card" href="#scenarios" aria-hidden="true" tabindex="-1">
+              <span class="barrel__thumb"><img src="assets/shots/cases-barber.png" width="780" height="1688" alt="" loading="lazy" decoding="async" /></span>
+              <span class="barrel__meta"><span class="barrel__tag">Кейсы</span><span class="barrel__niche">Барбершоп</span><span class="barrel__desc">Стрижка, укладка и приз от спонсора</span></span>
+            </a>
+            <a class="barrel__card" href="#scenarios" aria-hidden="true" tabindex="-1">
+              <span class="barrel__thumb"><img src="assets/shots/giveaway-results.png" width="780" height="1688" alt="" loading="lazy" decoding="async" /></span>
+              <span class="barrel__meta"><span class="barrel__tag">Гив</span><span class="barrel__niche">Блогер</span><span class="barrel__desc">Крупный приз и соавторство — растут два канала</span></span>
+            </a>
+            <a class="barrel__card" href="#scenarios" aria-hidden="true" tabindex="-1">
+              <span class="barrel__thumb"><img src="assets/shots/giveaway-user.png" width="780" height="1688" alt="" loading="lazy" decoding="async" /></span>
+              <span class="barrel__meta"><span class="barrel__tag">Стрик-квиз</span><span class="barrel__niche">Эксперт</span><span class="barrel__desc">Ежедневные вопросы — аудитория возвращается сама</span></span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -97,6 +115,26 @@
     <div class="container">
       <div class="pitch__inner">
         <p>Не просто бот для гивов. Spinly — <span class="hl">полноценный конструктор геймификации</span>: собираете под свою задачу что угодно — от мгновенного колеса до многодневного квиза, — и всё это живёт внутри Telegram.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="video">
+    <div class="container">
+      <div class="section__head" style="margin-inline:auto;text-align:center">
+        <span class="badge">Видео</span>
+        <h2>Посмотрите Spinly в деле за 40 секунд</h2>
+        <p class="lead" style="margin-inline:auto">Короткий ролик с объяснением: что это, какие форматы и как запустить первый розыгрыш.</p>
+      </div>
+      <!-- МЕСТО ПОД РОЛИК ≤40 сек. Когда запишешь — замени содержимое .video-frame на:
+           <video controls playsinline preload="metadata" poster="assets/video/poster.jpg">
+             <source src="assets/video/explainer.webm" type="video/webm" />
+             <source src="assets/video/explainer.mp4" type="video/mp4" />
+           </video>
+           Для инлайн-автоплея без звука: добавь autoplay muted loop и убери controls. -->
+      <div class="video-frame" id="video-frame">
+        <span class="video-frame__play" aria-hidden="true"></span>
+        <span class="video-frame__note">Здесь будет видео-эксплейнер. Заглушка — замени на свой ролик (WebM + MP4, ≤40 сек, играет прямо на странице).</span>
       </div>
     </div>
   </section>
@@ -184,6 +222,59 @@
           <h3>Эксперт <span class="pill-new">Новинка</span></h3>
           <p>Стрик-квиз перед запуском курса: вопросы по дням, серия и бонус. Аудитория возвращается каждый день сама.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compare">
+    <div class="container">
+      <div class="section__head">
+        <span class="badge">Почему Spinly</span>
+        <h2>Розыгрыш «в комментариях» и Spinly — это разные вещи</h2>
+        <p class="lead">Команды в чат и «напишите + в комментах» умеют одно действие. Spinly превращает розыгрыш в управляемый инструмент роста.</p>
+      </div>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col">Что важно</th>
+              <th scope="col">Розыгрыш в комментариях</th>
+              <th scope="col">Spinly</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Форматы</th>
+              <td>Только «напиши + и жди»</td>
+              <td>Колесо, кейсы, гив и стрик-квиз — под задачу</td>
+            </tr>
+            <tr>
+              <th scope="row">Результат для участника</th>
+              <td>Ждать неделю до итогов</td>
+              <td>Мгновенный приз в колесе и кейсах</td>
+            </tr>
+            <tr>
+              <th scope="row">Защита от ботов</th>
+              <td>Накрутку не отследить</td>
+              <td>Фильтр ботов на трёх уровнях</td>
+            </tr>
+            <tr>
+              <th scope="row">Публикация</th>
+              <td>Вручную в каждый канал</td>
+              <td>Сразу в несколько каналов из приложения</td>
+            </tr>
+            <tr>
+              <th scope="row">Аналитика</th>
+              <td>Ручной подсчёт в комментариях</td>
+              <td>Воронка и «приведено по каналам»</td>
+            </tr>
+            <tr>
+              <th scope="row">Удержание</th>
+              <td>Всплеск и отписки после финала</td>
+              <td>Пуши, повторные попытки, ежедневная серия</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
