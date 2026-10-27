@@ -212,7 +212,9 @@
     if (changed) a.href = u.toString();
 
     // 3) Цели Метрики.
-    if (isBotApp) a.addEventListener('click', function () { goal('open_app'); });
+    var customGoal = a.getAttribute('data-ym-goal');
+    if (customGoal) a.addEventListener('click', function () { goal(customGoal); });
+    else if (isBotApp) a.addEventListener('click', function () { goal('open_app'); });
     else if (isBot) a.addEventListener('click', function () { goal('open_bot'); });
     else if (isChannel) a.addEventListener('click', function () { goal('open_channel'); });
   });
