@@ -1846,3 +1846,11 @@ a:hover { color: var(--brand-orange-600); }
   gap: 4px 28px;
 }
 .cta-links .cta-link { margin-top: 18px; }
+
+/* Адаптивность секции «Это про вас» (3 карточки) */
+@media (max-width: 960px) {
+  .scenario-grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .scenario-grid--3 { grid-template-columns: 1fr; }
+}
