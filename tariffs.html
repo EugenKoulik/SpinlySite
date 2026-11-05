@@ -32,7 +32,6 @@
       <nav class="nav" id="main-nav">
         <a href="how.html">Как это работает?</a>
         <a href="faq.html">FAQ</a>
-        <a href="tariffs.html">Тарифы</a>
         <a href="help.html">Инструкция</a>
         <a class="nav-tg" href="https://t.me/spinlyroll" target="_blank" rel="noopener" aria-label="News — канал Spinly в Telegram">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
@@ -46,7 +45,7 @@
   <section class="help-hero">
     <div class="container">
       <span class="badge">Тарифы</span>
-      <h1>Три тарифа — <span class="accent">одни и те же возможности</span></h1>
+      <h1>Четыре тарифа — <span class="accent">одни и те же возможности</span></h1>
       <p class="lead" style="color:rgba(255,255,255,.78);max-width:42em">Тарифы не открывают фичи. Они расширяют лимиты: больше розыгрышей, глубже статистика, дополнительный антибот и запуск через random.org.</p>
     </div>
   </section>
@@ -61,48 +60,77 @@
         <h2>Выберите тариф</h2>
         <p class="lead">Клик — это заявка, не покупка. Цены появятся позже.</p>
       </div>
-      <p class="plan-shared">Во всех тарифах: все форматы розыгрышей, соавторство, уведомления, публикация в каналы.</p>
-      <div class="plan-grid">
-        <article class="plan-card" id="start">
-          <h3>Старт</h3>
-          <p class="plan-card__price">Бесплатно</p>
-          <p>Для первых розыгрышей и небольших каналов.</p>
+      <p class="plan-shared">Во всех тарифах: все форматы (колесо, кейсы, гивы, стрик-квиз), соавторство, менеджеры выдачи, публикация в каналы, реф-шансы в гиве и базовые итоги. Охват и число участников не ограничены ни на одном тарифе.</p>
+      <div class="plan-grid plan-grid--4">
+        <article class="plan-card" id="basic">
+          
+          <h3>Базовый</h3>
+          <p class="plan-card__for">Бесплатно · для разовых и небольших розыгрышей</p>
+          
           <ul class="ticks">
-            <!-- TODO: заменить N на реальные лимиты, когда тарифы утвердим -->
-            <li>До N активных розыгрышей</li>
-            <li>Базовая статистика</li>
-            <li>Базовый антибот</li>
+            <li>1 активный розыгрыш одновременно</li>
+            <li>До 10 розыгрышей в месяц</li>
+            <li>Моментальный: до 5 призов</li>
+            <li>Гив: до 10 победителей</li>
+            <li>Стрик-квиз: до 3 дней × 5 вопросов</li>
+            <li>Темы — за звёзды; антибот и random.org — разово</li>
           </ul>
+          
+          <a class="btn" href="https://t.me/spinlyroll?src=tariff_basic" target="_blank" rel="noopener" data-ym-goal="tariff_basic">Хочу этот тариф</a>
+        </article>
+        <article class="plan-card" id="start">
+          
+          <h3>Старт</h3>
+          <p class="plan-card__for">Когда хоббист вырос</p>
+          
+          <ul class="ticks">
+            <li>3 активных одновременно · до 30 в месяц</li>
+            <li>Моментальный до 20 призов · гив до 30 победителей</li>
+            <li>Стрик-квиз до 14 дней × 10 вопросов</li>
+            <li>Все темы оформления открыты</li>
+          </ul>
+          <p class="plan-card__more">Всё из «Базового» +</p>
           <a class="btn" href="https://t.me/spinlyroll?src=tariff_start" target="_blank" rel="noopener" data-ym-goal="tariff_start">Хочу этот тариф</a>
         </article>
         <article class="plan-card plan-card--featured" id="business">
           <span class="plan-card__badge">Рекомендуем</span>
           <h3>Бизнес</h3>
-          <p class="plan-card__price">Скоро</p>
-          <p>Для тех, кто растит канал системно.</p>
+          <p class="plan-card__for">Для системных розыгрышей</p>
+          
           <ul class="ticks">
-            <!-- TODO: заменить N на реальные лимиты, когда тарифы утвердим -->
-            <li>До N× активных розыгрышей</li>
-            <li>Расширенная статистика</li>
-            <li>Дополнительный антибот</li>
-            <li>Запуск через random.org</li>
+            <li>10 активных · без лимита в месяц</li>
+            <li>Моментальный до 100 · гив до 150 · квиз до 60 дней × 25 вопросов</li>
+            <li>Аналитика: динамика, источники, конверсия</li>
+            <li>Антибот и верификация random.org включены</li>
+            <li>Приоритетный саппорт 24/7</li>
           </ul>
+          <p class="plan-card__more">Всё из «Старта» +</p>
           <a class="btn" href="https://t.me/spinlyroll?src=tariff_business" target="_blank" rel="noopener" data-ym-goal="tariff_business">Хочу этот тариф</a>
         </article>
-        <article class="plan-card" id="agency">
-          <h3>Агентство</h3>
-          <p class="plan-card__price">Скоро</p>
-          <p>White-label и работа с клиентами. Расширенная статистика здесь нужна чаще всего.</p>
+        <article class="plan-card" id="partner">
+          
+          <h3>Партнёр</h3>
+          <p class="plan-card__for">Перепродажа услуг без потолков</p>
+          <p class="plan-earn">💰 Реферальная программа: зарабатывайте % с премиума клиентов</p>
           <ul class="ticks">
-            <!-- TODO: заменить N на реальные лимиты, когда тарифы утвердим -->
-            <li>Максимум / безлимит розыгрышей</li>
-            <li>Полная статистика с выгрузкой</li>
-            <li>Дополнительный антибот</li>
-            <li>Запуск через random.org</li>
-            <li>White-label и % с премиума клиентов</li>
+            <li>Безлимит: активные, в месяц и масштаб</li>
+            <li>Выгрузка статистики (CSV / Excel)</li>
+            <li>White-label — розыгрыши под вашим брендом</li>
+            <li>Featured-продвижение в ленте как перк</li>
           </ul>
-          <a class="btn" href="https://t.me/spinlyroll?src=tariff_agency" target="_blank" rel="noopener" data-ym-goal="tariff_agency">Хочу этот тариф</a>
+          <p class="plan-card__more">Всё из «Бизнеса» +</p>
+          <a class="btn" href="https://t.me/spinlyroll?src=tariff_partner" target="_blank" rel="noopener" data-ym-goal="tariff_partner">Хочу этот тариф</a>
         </article>
+      </div>
+      <div class="plan-note">
+        <h3>Почему бесплатного тарифа хватает небольшим организаторам</h3>
+        <p>Мы специально построили лимиты так, чтобы типовой розыгрыш был полностью бесплатным, а платить приходилось только за масштаб и бизнес-обвязку:</p>
+        <ul>
+          <li>Типовой сценарий бесплатен: 1 активный розыгрыш, приз и короткий квиз закрывают большинство каналов и локального бизнеса.</li>
+          <li>Охват и число участников не ограничены ни на одном тарифе — виральность мы не режем.</li>
+          <li>Все форматы, соавторство и публикация в каналы доступны сразу, без оплаты.</li>
+          <li>Создавать и архивировать розыгрыши можно свободно (до 10 в месяц); завершённые уходят в архив со статистикой и не занимают слот.</li>
+        </ul>
       </div>
     </div>
   </section>

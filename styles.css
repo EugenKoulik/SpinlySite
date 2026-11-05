@@ -1854,3 +1854,78 @@ a:hover { color: var(--brand-orange-600); }
 @media (max-width: 640px) {
   .scenario-grid--3 { grid-template-columns: 1fr; }
 }
+
+/* ---- Тарифы: сетка на 4 карточки + блок про бесплатный тариф ----------- */
+.plan-grid--4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1100px) { .plan-grid--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .plan-grid--4 { grid-template-columns: 1fr; } }
+
+.plan-card__for {
+  margin: 0 0 4px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--brand-orange) !important;
+}
+.plan-card__more {
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.86rem !important;
+  color: var(--muted) !important;
+}
+.section--dark .plan-card__more { border-top-color: rgba(255,255,255,.1); color: rgba(255,255,255,.6) !important; }
+
+.plan-note {
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand-orange);
+  border-radius: 14px;
+  padding: 22px 24px;
+  background: var(--surface-alt);
+}
+.plan-note h3 { margin: 0 0 10px; font-size: 1.1rem; letter-spacing: -0.02em; }
+.plan-note > p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+.plan-note ul { margin: 12px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.plan-note li { position: relative; padding-left: 22px; color: var(--muted); font-size: 0.95rem; line-height: 1.45; }
+.plan-note li::before { content: ""; position: absolute; left: 0; top: 0.58em; width: 12px; height: 2px; border-radius: 2px; background: var(--brand-orange); }
+.section--dark .plan-note { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.1); border-left-color: var(--brand-orange); }
+.section--dark .plan-note h3 { color: #fff; }
+.section--dark .plan-note > p, .section--dark .plan-note li { color: rgba(255,255,255,.78); }
+.plan-card--featured .plan-card__for { padding-right: 104px; }
+
+/* ---- Правки тарифов v2: 2 широкие карточки, подзаголовок, заработок ----- */
+.plan-grid--4 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+@media (max-width: 640px) { .plan-grid--4 { grid-template-columns: 1fr; } }
+
+/* название = заголовок, пояснение под ним (нейтральный подзаголовок) */
+.plan-card__for {
+  margin: 0 0 16px !important;
+  font-size: 0.95rem !important;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--muted) !important;
+}
+.section--dark .plan-card__for { color: rgba(255,255,255,.72) !important; }
+.plan-card--featured .plan-card__for { padding-right: 0; }
+.plan-card h3 { margin-bottom: 4px; }
+
+/* плашка «можно зарабатывать» для тарифа Партнёр */
+.plan-earn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 2px 0 2px !important;
+  padding: 9px 13px;
+  border-radius: 10px;
+  background: rgba(29, 158, 117, 0.14);
+  color: #1D9E75 !important;
+  font-weight: 700;
+  font-size: 0.9rem !important;
+  line-height: 1.3;
+}
+.section--dark .plan-earn { color: #5BD3A6 !important; background: rgba(29,158,117,.2); }
+
+.plan-card > .btn { align-self: center; }

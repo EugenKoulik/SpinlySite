@@ -40,7 +40,6 @@
       <nav class="nav" id="main-nav">
         <a href="how.html">Как это работает?</a>
         <a href="faq.html">FAQ</a>
-        <a href="tariffs.html">Тарифы</a>
         <a href="help.html">Инструкция</a>
         <a class="nav-tg" href="https://t.me/spinlyroll" target="_blank" rel="noopener" aria-label="News — канал Spinly в Telegram">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
@@ -210,15 +209,11 @@
         <h2>Посмотрите Spinly в деле за 40 секунд</h2>
         <p class="lead" style="margin-inline:auto">Короткий ролик с общим визуалом, форматами и механиками.</p>
       </div>
-      <!-- МЕСТО ПОД РОЛИК ≤40 сек. Когда запишешь — замени содержимое .video-frame на:
-           <video controls playsinline preload="metadata" poster="assets/video/poster.jpg">
-             <source src="assets/video/explainer.webm" type="video/webm" />
-             <source src="assets/video/explainer.mp4" type="video/mp4" />
-           </video>
-           Для инлайн-автоплея без звука: добавь autoplay muted loop и убери controls. -->
       <div class="video-frame" id="video-frame">
-        <span class="video-frame__play" aria-hidden="true"></span>
-        <span class="video-frame__note">Пока готовим ☺️</span>
+        <video controls playsinline preload="metadata">
+          <source src="assets/video/spinly-music.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает воспроизведение видео.
+        </video>
       </div>
     </div>
   </section>
@@ -304,60 +299,6 @@
     </div>
   </section>
 
-  <section class="section section--dark" id="pricing">
-    <div class="container">
-      <div class="section__head">
-        <span class="badge">Тарифы</span>
-        <h2>Тарифы</h2>
-        <p class="lead">Сейчас — бесплатно в рамках лимитов. Платные планы не откроют новые функции, а расширят количества.</p>
-      </div>
-      <p class="plan-shared">Во всех тарифах: все форматы розыгрышей, соавторство, уведомления, публикация в каналы.</p>
-      <div class="plan-grid plan-grid--compact">
-        <article class="plan-card">
-          <h3>Старт</h3>
-          <p class="plan-card__price">Бесплатно</p>
-          <p>Для первых розыгрышей и небольших каналов.</p>
-          <ul class="ticks ticks--light">
-            <!-- TODO: заменить N на реальные лимиты, когда тарифы утвердим -->
-            <li>До N активных розыгрышей</li>
-            <li>Базовая статистика</li>
-            <li>Базовый антибот</li>
-          </ul>
-          <a class="btn" href="tariffs.html#start">Подробнее →</a>
-        </article>
-        <article class="plan-card plan-card--featured">
-          <span class="plan-card__badge">Рекомендуем</span>
-          <h3>Бизнес</h3>
-          <p class="plan-card__price">Скоро</p>
-          <p>Для тех, кто растит канал системно.</p>
-          <ul class="ticks ticks--light">
-            <!-- TODO: заменить N на реальные лимиты, когда тарифы утвердим -->
-            <li>До N× активных розыгрышей</li>
-            <li>Расширенная статистика</li>
-            <li>Дополнительный антибот</li>
-            <li>Запуск через random.org</li>
-          </ul>
-          <a class="btn" href="tariffs.html#business">Подробнее →</a>
-        </article>
-        <article class="plan-card">
-          <h3>Агентство</h3>
-          <p class="plan-card__price">Скоро</p>
-          <p>White-label и работа с клиентами.</p>
-          <ul class="ticks ticks--light">
-            <!-- TODO: заменить N на реальные лимиты, когда тарифы утвердим -->
-            <li>Максимум / безлимит розыгрышей</li>
-            <li>Полная статистика с выгрузкой</li>
-            <li>Дополнительный антибот</li>
-            <li>Запуск через random.org</li>
-            <li>White-label и % с премиума клиентов</li>
-          </ul>
-          <a class="btn" href="tariffs.html#agency">Подробнее →</a>
-        </article>
-      </div>
-      <p class="section-faq">Частый вопрос: <a href="faq.html#start">сколько стоит? →</a></p>
-    </div>
-  </section>
-
   <section class="cta" id="cta">
     <div class="container">
       <h2>Запустите розыгрыш, который работает на рост</h2>
@@ -365,7 +306,6 @@
       <a class="btn btn-lg" href="https://t.me/spinlyrollbot/app?startapp=campaigns" target="_blank" rel="noopener">Запустить розыгрыш</a>
       <div class="cta-links">
         <a class="cta-link" href="help.html">Подробная инструкция →</a>
-        <a class="cta-link" href="mailto:cursor63@mail.ru">Остались вопросы? cursor63@mail.ru</a>
       </div>
     </div>
   </section>
